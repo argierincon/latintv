@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Cabecera } from '../Componentes/Cabecera';
-import { FormularioReserva } from '../Componentes/FormularioReserva';
+import { Cabecera } from '../componentes/Cabecera';
+import { FormularioReserva } from '../componentes/FormularioReserva';
 
 const Programacion = () => (
   <>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Programacion from '../vistas/Programacion';
-import Reserva from '../Vistas/ReservaEspacio';
+import Reserva from '../vistas/ReservaEspacio';
 
 
 const App = () => (
