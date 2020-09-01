@@ -17,5 +17,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+console.log('borrar console.log');
+
 var mountNode = document.getElementById('app');
 ReactDOM.render(<App name="Jane" />, mountNode);
