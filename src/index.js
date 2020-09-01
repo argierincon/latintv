@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './styles.scss';
+import App from './rutas/App';
+// import './styles.scss';
 import firebase from 'firebase';
 
 var firebaseConfig = {
@@ -20,4 +20,4 @@ firebase.initializeApp(firebaseConfig);
 console.log('borrar console.log');
 
 var mountNode = document.getElementById('app');
-ReactDOM.render(<App name="Jane" />, mountNode);
+ReactDOM.render(<App />, mountNode);
