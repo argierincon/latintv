@@ -10,7 +10,9 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production",
-    "test": "jest"
+    "test": "jest",
+    "start": "webpack-dev-server",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "react": "^16.13.1",
