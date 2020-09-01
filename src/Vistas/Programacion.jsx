@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Cabecera } from '../Componentes/Cabecera';
-import { Calendario } from '../Componentes/Calendario';
+import { Cabecera } from '../componentes/Cabecera';
+import { Calendario } from '../componentes/Calendario';
 
 const Programacion = () => (
   <>
