@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/estilos/contenedores/calendario.scss';
+import '../assets/estilos/componentes/calendario.scss';
 
 export const Calendario = () => {
   return (
