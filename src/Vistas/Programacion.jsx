@@ -10,7 +10,7 @@ const Programacion = () => (
     <Cabecera />
     <div className="contenedorProgramacion">
       <h3>¡Bienvenido, Agencia Fantasía!</h3>
-      <div className='contenedorSub' >
+      <div className="contenedorSub">
         <p className="subtitulo2"> Fecha </p>
         <p className="body1">
           {' '}
