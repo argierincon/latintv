@@ -22,7 +22,6 @@ const FlujoProducto = () => {
           <option value="BCP">BCP</option>
         </select>
       </div>
-
     </div>
   );
 };
