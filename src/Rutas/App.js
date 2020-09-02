@@ -6,7 +6,6 @@ import FlujoProducto from '../vistas/FlujoProducto';
 import FlujoProgramacion from '../Vistas/FlujoProgramacion';
 import FlujoFechaHora from '../vistas/FlujoFechaHora';
 import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
-import FlujoProgramacion from '../vistas/FlujoProgramacion';
 
 
 const App = () => (
@@ -18,5 +17,6 @@ const App = () => (
     <Route exact path="/reservadetalle" component={FlujoDetalleReserva} />{' '}
   </BrowserRouter>
 );
+
 
 export default App;
