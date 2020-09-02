@@ -5,6 +5,8 @@ import Programacion from '../vistas/Programacion';
 import FlujoFechaHora from '../vistas/FlujoFechaHora';
 import FlujoProducto from '../vistas/FlujoProducto';
 import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
+import FlujoProgramacion from '../vistas/FlujoProgramacion';
+
 
 const App = () => (
   <BrowserRouter>
@@ -12,6 +14,7 @@ const App = () => (
     <Route exact path='/procesoproducto' component={FlujoProducto} />
     <Route exact path='/procesofechahora' component={FlujoFechaHora} />
     <Route exact path='/procesodetalle' component={FlujoDetalleReserva} />
+    <Route exact path='/programas' component={FlujoProgramacion} />
   </BrowserRouter>
 );
 
