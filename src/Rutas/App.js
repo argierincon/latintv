@@ -5,8 +5,8 @@ import Programacion from '../vistas/Programacion';
 import FlujoProducto from '../vistas/FlujoProducto';
 import FlujoProgramacion from '../Vistas/FlujoProgramacion';
 import FlujoFechaHora from '../vistas/FlujoFechaHora';
+import Navbar from '../Componentes/BarraLateral/BarraLateral';
 import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
-
 
 const App = () => (
   <BrowserRouter>

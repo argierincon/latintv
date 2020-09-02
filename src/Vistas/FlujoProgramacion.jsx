@@ -4,6 +4,7 @@ import 'firebase/firestore';
 
 import Categorias from '../Componentes/Categorias/Categorias.jsx';
 import Programa from '../Componentes/Programa/Programa.jsx';
+import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario.jsx';
 import { FlujoProceso } from '../Componentes/FlujoProceso';
 import { InfoHead } from '../Componentes/InfoHead';
 
@@ -59,7 +60,7 @@ const FlujoProgramacion = () => {
   }, []);
 
   return (
-    <>
+    <ContenedorFormulario>
       <FlujoProceso />
       <InfoHead
         titulo={'Elige un programa'}
@@ -97,7 +98,7 @@ const FlujoProgramacion = () => {
           />
         ))}
       </Categorias>
-    </>
+    </ContenedorFormulario>
   );
 };
 

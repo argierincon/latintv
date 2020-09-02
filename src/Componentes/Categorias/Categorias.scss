@@ -1,16 +1,15 @@
 .contenedorCategorias {
-  width: 60%;
-  margin: 2% 0;
+  width: 70%;
 }
 
 .contenedorCategorias > div > p {
   font-size: 1.2em;
   font-weight: bold;
-  margin: 3% 2%;
+  margin: 3% 0;
 }
 
 .cat {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  // justify-content: center;
 }

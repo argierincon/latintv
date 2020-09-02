@@ -1,4 +1,7 @@
 import React from 'react';
+import Input from '../Componentes/Input';
+import TipoPublicidad from './TipoPublicidad';
+import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
 import { SeleccionFecha } from '../componentes/SeleccionFecha';
@@ -8,21 +11,19 @@ import '../assets/estilos/vistas/flujoFechaHora.scss';
 
 const FlujoProducto = () => {
   return (
-    <div className="contenedorFlujoFH flujoProd">
-      <FlujoProceso />
-      <InfoHead
-        titulo="Elige tu producto"
-        info="Para generar tu reserva selecciona el producto que deseas pubicitar. "
-      />
-
-      <div className="contenedorSelector">
-        <select className="seleccionProducto" id="producto">
-          <option value="CocaCola">Coca Cola</option>
-          <option value="Cristal">Cristal</option>
-          <option value="BCP">BCP</option>
-        </select>
+    <ContenedorFormulario>
+      <div className="contenedorFlujoFH flujoProd">
+        <FlujoProceso />
+        <div>
+          <InfoHead titulo="Ingresa tu producto" />
+          <Input />
+          <InfoHead titulo="Elige el tipo de publicidad" />
+          <TipoPublicidad />
+          <InfoHead titulo="Pega la url de tu spot publicitario." />
+          <Input />
+        </div>
       </div>
-    </div>
+    </ContenedorFormulario>
   );
 };
 
