@@ -5,9 +5,13 @@ import Programacion from '../vistas/Programacion';
 import FlujoProducto from '../vistas/FlujoProducto';
 import FlujoProgramacion from '../Vistas/FlujoProgramacion';
 import FlujoFechaHora from '../vistas/FlujoFechaHora';
+import Navbar from '../Componentes/BarraLateral/BarraLateral';
 import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
+import FlujoProgramacion from '../vistas/FlujoProgramacion';
+
 
 const App = () => (
+ 
   <BrowserRouter>
     <Route exact path="/" component={Programacion} />{' '}
     <Route exact path="/reservaproducto" component={FlujoProducto} />{' '}

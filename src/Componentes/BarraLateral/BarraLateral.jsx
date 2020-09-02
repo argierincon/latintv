@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { BarraLateralData } from './BarraLateralData';
-import '../styles/Barra.scss';
+import './Barra.scss';
 import { IconContext } from 'react-icons';
 
 function BarraLateral() {
