@@ -1,6 +1,14 @@
+
+.contenedorSubInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 100px;
+}
+
 h3 {
     /* <1440 Desktop/32 - H3 */
-    font-family: Poppins;
+    //font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -19,12 +27,14 @@ h3 {
     font-size: 18px;
     line-height: 23px;
     letter-spacing: 0.025em;
-    color: #000000;
+    color: #3F3838;
+
+    margin: 10px 0;
 }
 
 .body1 {
     /* <1440 Desktop/16 - Body 1 */
-    font-family: Sintony;
+    //font-family: Sintony;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -33,5 +43,16 @@ h3 {
     align-items: center;
     letter-spacing: 0.025em;
 
-    color: #000000;
+    color: #3F3838
+}
+
+.contenedorBotones {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px 60px;
+}
+
+.btn {
+    padding: 10px;
+    border: 1px solid;
 }
