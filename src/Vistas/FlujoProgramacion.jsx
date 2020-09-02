@@ -15,7 +15,8 @@ const FlujoProgramacion = () => {
 
   useEffect(() => {
     db.collection('programacion')
-      .where('categoria', '==', 'Noticias y deportes')
+      .where('categoria', '==', 'noticias y deportes')
+      .orderBy('num', 'asc')
       .get()
       .then((querySnapShot) => {
         querySnapShot.forEach((doc) => {
@@ -30,6 +31,7 @@ const FlujoProgramacion = () => {
   useEffect(() => {
     db.collection('programacion')
       .where('categoria', '==', 'entretenimiento')
+      .orderBy('num', 'asc')
       .get()
       .then((querySnapShot) => {
         querySnapShot.forEach((doc) => {
@@ -43,7 +45,8 @@ const FlujoProgramacion = () => {
 
   useEffect(() => {
     db.collection('programacion')
-      .where('categoria', '==', 'Novelas y series')
+      .where('categoria', '==', 'novelas y series')
+      .orderBy('num', 'asc')
       .get()
       .then((querySnapShot) => {
         querySnapShot.forEach((doc) => {
@@ -74,7 +77,7 @@ const FlujoProgramacion = () => {
           />
         ))}
       </Categorias>
-      <Categorias categorias="entretenimiento">
+      <Categorias categorias="Entretenimiento">
         {entretenimiento.map((ele) => (
           <Programa
             nombrePrograma={ele.nombre}
