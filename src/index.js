@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import firebase from 'firebase';
+
+import reducer from './reducers';
 import App from './rutas/App';
 // import './styles.scss';
-import firebase from 'firebase';
 
 var firebaseConfig = {
   apiKey: 'AIzaSyDFWK644f3VPzx-TdThbWJll302ww_0Cts',
@@ -17,7 +21,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-console.log('borrar console.log');
+const store = createStore(reducer, {});
 
 var mountNode = document.getElementById('app');
-ReactDOM.render(<App />, mountNode);
+ReactDOM.render(<Provider store={store}> <App /> </Provider>, mountNode);
