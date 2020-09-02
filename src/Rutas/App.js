@@ -8,10 +8,10 @@ import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
 
 const App = () => (
   <BrowserRouter>
-    <Route exact path='/' component={Programacion} />
-    <Route exact path='/procesoproducto' component={FlujoProducto} />
-    <Route exact path='/procesofechahora' component={FlujoFechaHora} />
-    <Route exact path='/procesodetalle' component={FlujoDetalleReserva} />
+    <Route exact path="/" component={Programacion} />
+    <Route exact path="/procesoproducto" component={FlujoProducto} />
+    <Route exact path="/procesofechahora" component={FlujoFechaHora} />
+    <Route exact path="/procesodetalle" component={FlujoDetalleReserva} />
   </BrowserRouter>
 );
 
