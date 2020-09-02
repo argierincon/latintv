@@ -1,0 +1,46 @@
+.contenedoInfoHead{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 100px;
+}
+
+h3 {
+    /* <1440 Desktop/32 - H3 */
+    //font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+
+    /* identical to box height */
+    letter-spacing: 0.025em;
+
+    /* Primary Text */
+    color: #3F3838;
+}
+
+.subtitulo2 {
+    //font-family: Sintony;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.025em;
+    color: #000000;
+}
+
+.body1 {
+    /* <1440 Desktop/16 - Body 1 */
+    //font-family: Sintony;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.025em;
+
+    margin: 0px;
+    color: #000000;
+}
