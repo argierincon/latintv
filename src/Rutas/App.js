@@ -1,19 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+
 import Programacion from '../vistas/Programacion';
-import Reserva from '../vistas/ReservaEspacio';
+import FlujoProducto from '../vistas/FlujoProducto';
+import FlujoProgramacion from '../Vistas/FlujoProgramacion';
 import FlujoFechaHora from '../vistas/FlujoFechaHora';
 import Navbar from '../Componentes/BarraLateral/BarraLateral';
-import Inicio from '../Vistas/Inicio'
+import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
+import FlujoProgramacion from '../vistas/FlujoProgramacion';
+
 
 const App = () => (
  
   <BrowserRouter>
-  <Navbar />
-    <Route exact path='/' component={Inicio} />
-    <Route exact path='/programacion' component={Programacion} />
-    <Route exact path='/reserva' component={Reserva} />
-    <Route exact path='/procesofechahora' component={FlujoFechaHora} />
+    <Route exact path="/" component={Programacion} />{' '}
+    <Route exact path="/reservaproducto" component={FlujoProducto} />{' '}
+    <Route exact path="/reservaprograma" component={FlujoProgramacion} />{' '}
+    <Route exact path="/reservafechahora" component={FlujoFechaHora} />{' '}
+    <Route exact path="/reservadetalle" component={FlujoDetalleReserva} />{' '}
   </BrowserRouter>
 );
 

@@ -3,7 +3,7 @@ import './Programa.scss';
 
 const Programa = ({ nombrePrograma, name, id }) => {
   return (
-    <label for={`programa${id}`}>
+    <label htmlFor={`programa${id}`}>
       <div className="tarjetaPrograma">
         <div>
           <input type="radio" name={name} id={`programa${id}`} />

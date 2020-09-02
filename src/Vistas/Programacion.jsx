@@ -9,13 +9,15 @@ const Programacion = () => (
   <>
     <Cabecera />
     <div className="contenedorProgramacion">
-      <h1>Bienvenido!</h1>
-      <p className='infoProgramacion'>
-        Aquí puedes informarte sobre la programación de Latin TV.{' '}
-        <strong>
-          Para reservar un espacio publicitario dirígete al menú lateral
-        </strong>
-      </p>
+      <h3>¡Bienvenido, Agencia Fantasía!</h3>
+      <div className="contenedorSub">
+        <p className="subtitulo2"> Fecha </p>
+        <p className="body1">
+          {' '}
+          Del lunes 17 al domingo 23 puedes seleccionar una o más opciones para
+          la transmición de tu publicidad.{' '}
+        </p>
+      </div>
       <div className="contenedorPrograma">
         <div className="opcionesRecargo">
           <div className="opcion">
