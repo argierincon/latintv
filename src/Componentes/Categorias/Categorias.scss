@@ -1,6 +1,6 @@
-// .contenedorCategorias {
- 
-// }
+.contenedorCategorias {
+  width: 70%;
+}
 
 .contenedorCategorias > div > p {
   font-size: 1.2em;
@@ -11,5 +11,5 @@
 .cat {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  // justify-content: center;
 }
