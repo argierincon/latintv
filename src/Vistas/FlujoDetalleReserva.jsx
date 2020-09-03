@@ -6,6 +6,7 @@ import 'firebase/firestore';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
 import { Boton } from '../componentes/Boton';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -18,7 +19,7 @@ const FlujoDetalleReserva = (props) => {
     fecha,
     hora,
     costoPrograma,
-    recargoPrograma,
+    recargoHorario,
   } = props;
 
   const db = firebase.firestore();
@@ -32,7 +33,7 @@ const FlujoDetalleReserva = (props) => {
         fecha,
         hora,
         costoPrograma,
-        recargoPrograma,
+        recargoHorario,
       })
       .then(() => console.log('listo'));
   };
@@ -52,7 +53,9 @@ const FlujoDetalleReserva = (props) => {
   const fechaTransformada = Object.entries(fecha).filter((ele) => ele[1]);
 
   return (
-    <div className="contenedorFlujoFH">
+    <>
+    <BarraLateral></BarraLateral>
+      <div className="contenedorFlujoFH">
       <FlujoProceso
         producto="check"
         programa="check"
@@ -78,7 +81,7 @@ const FlujoDetalleReserva = (props) => {
         </li>
         <li>Hora: {hora}</li>
         <li>Costo Programa: {costoPrograma}</li>
-        <li>Recargo Hora: {recargoPrograma}</li>
+        <li>Recargo Hora: {recargoHorario}</li>
         <li>Recargo Empresa:</li>
         <li>Costo Publicidad</li>
       </ul>
@@ -93,6 +96,8 @@ const FlujoDetalleReserva = (props) => {
         />
       </div>
     </div>
+ </>
+    
   );
 };
 
@@ -105,7 +110,7 @@ const mapStateToProps = (state) => {
     fecha: state.fecha,
     hora: state.hora,
     costoPrograma: state.costoPrograma,
-    recargoPrograma: state.recargoPrograma,
+    recargoHorario: state.recargoHorario,
   };
 };
 

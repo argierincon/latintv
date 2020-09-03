@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import firebase from 'firebase';
 import 'firebase/firestore';
-
 import { setFechaHora } from '../actions';
 import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario';
 import { FlujoProceso } from '../componentes/FlujoProceso';
@@ -11,6 +10,7 @@ import { InfoHead } from '../componentes/InfoHead';
 import { SeleccionFecha } from '../componentes/SeleccionFecha';
 import { SeleccionHora } from '../componentes/SeleccionHora';
 import { Boton } from '../componentes/Boton';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral'
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -70,6 +70,8 @@ const FlujoFechaHora = (props) => {
   }, []);
 
   return (
+    <>
+    <BarraLateral/>
     <ContenedorFormulario>
       <FlujoProceso producto="check" programa="check" fecha="check" />
       <div>
@@ -111,6 +113,7 @@ const FlujoFechaHora = (props) => {
         />
       </div>
     </ContenedorFormulario>
+    </>
   );
 };
 

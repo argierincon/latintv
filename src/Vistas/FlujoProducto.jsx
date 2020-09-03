@@ -11,6 +11,7 @@ import { Boton } from '../componentes/Boton';
 import SelectSingleExample from '../componentes/SelectSingleExample';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 const FlujoProducto = (props) => {
   const [datosFormulario, setDatosFormulario] = useState({
@@ -44,29 +45,32 @@ const FlujoProducto = (props) => {
   };
 
   return (
-    <ContenedorFormulario>
-      <FlujoProceso producto="check" />
-      <div>
-        <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
-        <p className="subtitulo2 marginText">Elige tu producto</p>
-        <SelectSingleExample name="selector" onChange={handleChange} />
-        <p className="subtitulo2 marginText">Elige el tipo de publicidad</p>
-        <TipoPublicidad onChange={handleRadio} />
-        <p className="subtitulo2 marginText">
-          Pega la url de tu spot publicitario.
-        </p>
-        <Input name="linkPublicidad" onChange={handleChange} />
-      </div>
-      <div className="contenedorBotones">
-        <Boton namebutton="Atrás" estilo="back" link="/" />
-        <Boton
-          namebutton="Continuar"
-          estilo="next"
-          link="/reservaprograma"
-          onClick={handleClick}
-        />{' '}
-      </div>
-    </ContenedorFormulario>
+    <>
+      <BarraLateral />
+      <ContenedorFormulario>
+        <FlujoProceso producto="check" />
+        <div>
+          <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
+          <p className="subtitulo2 marginText">Elige tu producto</p>
+          <SelectSingleExample name="selector" onChange={handleChange} />
+          <p className="subtitulo2 marginText">Elige el tipo de publicidad</p>
+          <TipoPublicidad onChange={handleRadio} />
+          <p className="subtitulo2 marginText">
+            Pega la url de tu spot publicitario.
+          </p>
+          <Input name="linkPublicidad" onChange={handleChange} />
+        </div>
+        <div className="contenedorBotones">
+          <Boton namebutton="Atrás" estilo="back" link="/" />
+          <Boton
+            namebutton="Continuar"
+            estilo="next"
+            link="/reservaprograma"
+            onClick={handleClick}
+          />{' '}
+        </div>
+      </ContenedorFormulario>
+    </>
   );
 };
 

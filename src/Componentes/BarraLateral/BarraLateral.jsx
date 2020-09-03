@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons';
 import logo from '../../assets/estilos/imagenes/logo-latin.png'
 
 function BarraLateral() {
-    const [LadoBarra, setSidebar] = useState(true);
+    const [LadoBarra, setSidebar] = useState(false);
 
     const MostrarLadoBarra = () => setSidebar(!LadoBarra);
 
@@ -19,7 +19,7 @@ function BarraLateral() {
                     <Link to='#' className='menu-bars'>
                         <FaIcons.FaBars onClick={MostrarLadoBarra} />
                     </Link> 
-                    <header>
+                    <div className="header">
                         <div className='contenedorLogo'>
                             <Link to="/" className=''><img className='logo' src ={logo} alt="Logo Latin"/></Link>
                         </div>
@@ -32,8 +32,8 @@ function BarraLateral() {
                             <Link to="/" className='btnHeader'><span>REGISTRATE</span></Link>
                             <Link to="/Ingreso" className='btnHeader'><span>INGRESAR</span></Link>
                         </div>
-                    </header>
-                
+                    </div>
+                  
                     {/* <h2 style={{ color: 'white', paddingLeft: 95, paddingBottom: 5, alignContent: "end", position: "fixed", alignmentBaseline: "middle" }}>Latin TV</h2> */}
                 </div>
 

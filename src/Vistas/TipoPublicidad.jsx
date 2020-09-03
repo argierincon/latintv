@@ -55,7 +55,7 @@ const TipoPublicidad = ({ onChange }) => {
             <hr />
             <p className="datosPublicidad">
               {' '}
-              <strong>$ 4000.00 USD</strong>por fecha{' '}
+              <strong>$ 4000.00 USD</strong> por fecha{' '}
             </p>
             <p className="datosPublicidad"> *Aviso de 30 segundos </p>
           </div>
