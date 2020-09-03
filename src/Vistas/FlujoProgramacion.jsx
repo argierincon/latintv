@@ -22,7 +22,7 @@ const FlujoProgramacion = (props) => {
     setDatosFormulario({
       programa: e.target.value,
       costoPrograma: e.target.dataset.costo,
-      recargoPrograma: e.target.dataset.recargo,
+      recargoHorario: e.target.dataset.recargo,
     });
     console.log(datosFormulario);
   };
