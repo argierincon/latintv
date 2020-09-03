@@ -120,7 +120,7 @@ const FlujoProgramacion = (props) => {
         ))}
       </Categorias>
       <div className="contenedorBotones">
-        <Boton namebutton="Atrás" estilo="back" link="/reservadetalle" />
+        <Boton namebutton="Atrás" estilo="back" link="/reservaproducto" />
         <Boton
           namebutton="Continuar"
           estilo="next"

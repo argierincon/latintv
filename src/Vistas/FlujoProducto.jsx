@@ -8,8 +8,6 @@ import ContenedorFormulario from '../Componentes/ContenedorFormulario/Contenedor
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
 import { Boton } from '../componentes/Boton';
-import { SeleccionFecha } from '../componentes/SeleccionFecha';
-import { SeleccionHora } from '../componentes/SeleccionHora';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -28,6 +26,14 @@ const FlujoProducto = (props) => {
     console.log(datosFormulario);
   };
 
+  const handleRadio = (e) => {
+    setDatosFormulario({
+      ...datosFormulario,
+      tipoDePublicidad: e.target.value,
+    });
+    console.log(datosFormulario);
+  };
+
   const handleClick = () => {
     props.setProducto(datosFormulario);
   };
@@ -35,19 +41,24 @@ const FlujoProducto = (props) => {
   return (
     <ContenedorFormulario>
       <div className="contenedorFlujoFH flujoProd">
-        <FlujoProceso />
+        <FlujoProceso producto="check" />
         <div>
           <InfoHead titulo="Ingresa tu producto" />
           <Input name="marcaProducto" onChange={handleChange} />
           <InfoHead titulo="Elige el tipo de publicidad" />
-          <TipoPublicidad />
+          <TipoPublicidad onChange={handleRadio} />
           <InfoHead titulo="Pega la url de tu spot publicitario." />
           <Input name="linkPublicidad" onChange={handleChange} />
         </div>
       </div>
       <div className="contenedorBotones">
-        <Boton namebutton="Atrás" estilo="back" link="/reservadetalle" />
-        <Boton namebutton="Continuar" estilo="next" link="/reservadetalle" />
+        <Boton namebutton="Atrás" estilo="back" link="/" />
+        <Boton
+          namebutton="Continuar"
+          estilo="next"
+          link="/reservaprograma"
+          onClick={handleClick}
+        />{' '}
       </div>
     </ContenedorFormulario>
   );
