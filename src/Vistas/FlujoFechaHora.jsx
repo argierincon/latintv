@@ -3,8 +3,10 @@ import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
 import { SeleccionFecha } from '../componentes/SeleccionFecha';
 import { SeleccionHora } from '../componentes/SeleccionHora';
+import { Boton } from '../componentes/Boton';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
+
 
 const FlujoFechaHora = () => {
   return (
@@ -29,8 +31,8 @@ const FlujoFechaHora = () => {
       </div>
       <SeleccionHora />
       <div className='contenedorBotones' >
-        <button className='btn atras' >Atras</button>
-        <button className='btn sgte'>Siguiente</button>
+        <Boton namebutton='Atrás' estilo='back' link='/reservadetalle'/>
+        <Boton namebutton='Siguiente' estilo='next' link='/reservadetalle'/>
       </div>
     </div>
   );
