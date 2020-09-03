@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import '../assets/estilos/componentes/boton.scss'
+import '../assets/estilos/componentes/boton.scss';
 
 export const Boton = ({ namebutton, link, estilo }) => {
   return (

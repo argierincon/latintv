@@ -6,12 +6,21 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 import '../assets/estilos/componentes/flujoProceso.scss';
 
-export const FlujoProceso = () => {
+export const FlujoProceso = ({
+  producto = 'check',
+  programa = 'sinCheck',
+  fecha = 'sinCheck',
+  reserva = 'sinCheck',
+}) => {
   return (
     <div className="contenedorIcon">
       <div className="step">
         <div>
-          <FontAwesomeIcon className="check" icon={faCheckCircle} />
+          {producto === 'sinCheck' ? (
+            <div className={reserva}></div>
+          ) : (
+            <FontAwesomeIcon className={producto} icon={faCheckCircle} />
+          )}
         </div>
         <p>Producto</p>
       </div>
@@ -20,7 +29,11 @@ export const FlujoProceso = () => {
       </div>
       <div className="step">
         <div>
-          <FontAwesomeIcon className="check" icon={faCheckCircle} />
+          {programa === 'sinCheck' ? (
+            <div className={reserva}></div>
+          ) : (
+            <FontAwesomeIcon className={producto} icon={faCheckCircle} />
+          )}
         </div>
         <p>Programa</p>
       </div>
@@ -29,7 +42,11 @@ export const FlujoProceso = () => {
       </div>
       <div className="step">
         <div>
-          <FontAwesomeIcon className="check" icon={faCheckCircle} />
+          {fecha === 'sinCheck' ? (
+            <div className={reserva}></div>
+          ) : (
+            <FontAwesomeIcon className={fecha} icon={faCheckCircle} />
+          )}
         </div>
         <p>Fecha y hora</p>
       </div>
@@ -37,7 +54,13 @@ export const FlujoProceso = () => {
         <hr />
       </div>
       <div className="step">
-        <div className="sinCheck"></div>
+        <div>
+          {reserva === 'sinCheck' ? (
+            <div className={reserva}></div>
+          ) : (
+            <FontAwesomeIcon className={reserva} icon={faCheckCircle} />
+          )}
+        </div>
         <p>Detalles de reserva</p>
       </div>
     </div>

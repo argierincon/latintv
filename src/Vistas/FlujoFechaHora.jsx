@@ -11,7 +11,7 @@ import '../assets/estilos/vistas/flujoFechaHora.scss';
 const FlujoFechaHora = () => {
   return (
     <div className="contenedorFlujoFH">
-      <FlujoProceso />
+      <FlujoProceso producto="check" programa="check" fecha="check" />
       <InfoHead titulo="Elige fecha y hora" />
       <div className='contenedorSubInfo' >
         <p className="subtitulo2"> Fecha </p>
