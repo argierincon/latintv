@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { Cabecera } from '../componentes/Cabecera';
 import { Calendario } from '../componentes/Calendario';
 
 import '../assets/estilos/vistas/programacion.scss';
 
 const Programacion = () => (
   <>
-    <Cabecera />
     <div className="contenedorProgramacion">
       <h3>¡Bienvenido, Agencia Fantasía!</h3>
       <div className="contenedorSub">
@@ -26,7 +24,7 @@ const Programacion = () => (
           </div>
           <div className="opcion">
             <div className="caja sinRecargo"></div>
-            <p>Sin recargo</p>
+            <p>Precio regular</p>
           </div>
           <div className="opcion">
             <div className="caja cincoRecargo"></div>

@@ -1,34 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { setProducto } from '../actions';
+import Input from '../Componentes/Input';
+import TipoPublicidad from './TipoPublicidad';
+import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
-import { SeleccionFecha } from '../componentes/SeleccionFecha';
-import { SeleccionHora } from '../componentes/SeleccionHora';
+import { Boton } from '../componentes/Boton';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
-const FlujoProducto = () => {
-  return (
-    <div className="contenedorFlujoFH flujoProd">
-      <FlujoProceso />
-      <InfoHead
-        titulo="Elige tu producto"
-        info="Para generar tu reserva selecciona el producto que deseas pubicitar. "
-      />
+const FlujoProducto = (props) => {
+  const [datosFormulario, setDatosFormulario] = useState({
+    marcaProducto: null,
+    tipoDePublicidad: null,
+    linkPublicidad: null,
+  });
 
-      <div className="contenedorSelector">
-        <select className="seleccionProducto" id="producto">
-          <option value="CocaCola">Coca Cola</option>
-          <option value="Cristal">Cristal</option>
-          <option value="BCP">BCP</option>
-        </select>
+  const handleChange = (e) => {
+    setDatosFormulario({
+      ...datosFormulario,
+      [e.target.name]: e.target.value,
+    });
+    console.log(datosFormulario);
+  };
+
+  const handleRadio = (e) => {
+    setDatosFormulario({
+      ...datosFormulario,
+      tipoDePublicidad: e.target.value,
+    });
+    console.log(datosFormulario);
+  };
+
+  const handleClick = () => {
+    props.setProducto(datosFormulario);
+  };
+
+  return (
+    <ContenedorFormulario>
+      <div className="contenedorFlujoFH flujoProd">
+        <FlujoProceso producto="check" />
+        <div>
+          <InfoHead titulo="Ingresa tu producto" />
+          <Input name="marcaProducto" onChange={handleChange} />
+          <InfoHead titulo="Elige el tipo de publicidad" />
+          <TipoPublicidad onChange={handleRadio} />
+          <InfoHead titulo="Pega la url de tu spot publicitario." />
+          <Input name="linkPublicidad" onChange={handleChange} />
+        </div>
       </div>
-    </div>
+      <div className="contenedorBotones">
+        <Boton namebutton="Atrás" estilo="back" link="/" />
+        <Boton
+          namebutton="Continuar"
+          estilo="next"
+          link="/reservaprograma"
+          onClick={handleClick}
+        />{' '}
+      </div>
+    </ContenedorFormulario>
   );
 };
 
-export default FlujoProducto;
+const mapDispatchToProps = {
+  setProducto,
+};
 
-/*
-<label for="cars">Elige un prod</label>
-<option value="prod" selected>Prod</option>
-*/
+export default withRouter(connect(null, mapDispatchToProps)(FlujoProducto));

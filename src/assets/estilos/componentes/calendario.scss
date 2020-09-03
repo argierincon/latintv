@@ -1,5 +1,25 @@
 .table {
     padding: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.025em
+}
+.table thead th {
+    vertical-align: middle;
+}
+.table td {
+    vertical-align: middle;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+}
+
+.table th {
+    vertical-align: middle;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
 }
 
 .cabeceraTabla {
