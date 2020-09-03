@@ -7,6 +7,7 @@ import FlujoProgramacion from '../Vistas/FlujoProgramacion';
 import FlujoFechaHora from '../vistas/FlujoFechaHora';
 import Navbar from '../Componentes/BarraLateral/BarraLateral';
 import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
+import TipoPrograma from '../vistas/TipoPrograma';
 
 const App = () => (
   <BrowserRouter>
@@ -15,8 +16,8 @@ const App = () => (
     <Route exact path="/reservaprograma" component={FlujoProgramacion} />{' '}
     <Route exact path="/reservafechahora" component={FlujoFechaHora} />{' '}
     <Route exact path="/reservadetalle" component={FlujoDetalleReserva} />{' '}
+    <Route exact path="/tipoprogramas" component={TipoPrograma} />{' '}
   </BrowserRouter>
 );
-
 
 export default App;
