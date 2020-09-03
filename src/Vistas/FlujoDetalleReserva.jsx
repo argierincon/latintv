@@ -5,8 +5,7 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
-import { SeleccionFecha } from '../componentes/SeleccionFecha';
-import { SeleccionHora } from '../componentes/SeleccionHora';
+import { Boton } from '../componentes/Boton';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -36,7 +35,12 @@ const FlujoDetalleReserva = (props) => {
 
   return (
     <div className="contenedorFlujoFH">
-      <FlujoProceso />
+      <FlujoProceso
+        producto="check"
+        programa="check"
+        fecha="check"
+        reserva="check"
+      />
       <InfoHead
         titulo="Detalles de reserva"
         info="Verifica los detalles de reserva de tu espacio publicitario."
@@ -49,9 +53,16 @@ const FlujoDetalleReserva = (props) => {
         <li>Dia: {fecha.Domingo ? 'domingo' : 'algun dia'}</li>
         <li>Hora: {hora}</li>
       </ul>
-      <button onClick={handleClick} type="button">
-        insertar
-      </button>
+
+      <div className="contenedorBotones">
+        <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
+        <Boton
+          onClick={handleClick}
+          namebutton="Confirmar"
+          estilo="next"
+          link="/reservadetalle"
+        />
+      </div>
     </div>
   );
 };
