@@ -1,14 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import firebase from 'firebase';
 import 'firebase/firestore';
-
+import { setPrograma } from '../actions';
 import Categorias from '../Componentes/Categorias/Categorias.jsx';
 import Programa from '../Componentes/Programa/Programa.jsx';
 import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario.jsx';
 import { FlujoProceso } from '../Componentes/FlujoProceso';
 import { InfoHead } from '../Componentes/InfoHead';
 
-const FlujoProgramacion = () => {
+const FlujoProgramacion = (props) => {
+  const [datosFormulario, setDatosFormulario] = useState({
+    programa: null,
+  });
+
+  const handleChange = (e) => {
+    setDatosFormulario({
+      ...datosFormulario,
+      [e.target.name]: e.target.value,
+    });
+    console.log(datosFormulario);
+  };
+
+  const handleClick = () => {
+    props.setPrograma(datosFormulario);
+  };
+
   const db = firebase.firestore();
   const [noticias, setNoticias] = useState([]);
   const [entretenimiento, setEntretenimiento] = useState([]);
@@ -65,14 +83,15 @@ const FlujoProgramacion = () => {
       <InfoHead
         titulo={'Elige un programa'}
         info={
-          'Selecciona un programa en el que deseas la transmición de tu espacio publicitario.'
+          'Selecciona un programa en el que deseas la transmisión de tu espacio publicitario.'
         }
       />
       <Categorias categorias="Noticias y deportes">
         {noticias.map((ele) => (
           <Programa
+            onChange={handleChange}
             nombrePrograma={ele.nombre}
-            name="programacionLatin"
+            name="programa"
             id={ele.nombre}
             key={ele.nombre}
           />
@@ -81,8 +100,9 @@ const FlujoProgramacion = () => {
       <Categorias categorias="Entretenimiento">
         {entretenimiento.map((ele) => (
           <Programa
+            onChange={handleChange}
             nombrePrograma={ele.nombre}
-            name="programacionLatin"
+            name="programa"
             id={ele.nombre}
             key={ele.nombre}
           />
@@ -91,8 +111,9 @@ const FlujoProgramacion = () => {
       <Categorias categorias="Novelas y series">
         {novelas.map((ele) => (
           <Programa
+            onChange={handleChange}
             nombrePrograma={ele.nombre}
-            name="programacionLatin"
+            name="programa"
             id={ele.nombre}
             key={ele.nombre}
           />
@@ -102,4 +123,8 @@ const FlujoProgramacion = () => {
   );
 };
 
-export default FlujoProgramacion;
+const mapDispatchToProps = {
+  setPrograma,
+};
+
+export default withRouter(connect(null, mapDispatchToProps)(FlujoProgramacion));

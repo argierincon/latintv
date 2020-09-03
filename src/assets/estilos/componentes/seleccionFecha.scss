@@ -1,10 +1,24 @@
 .contenedorCheckbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 0;
 }
 
-.check {
-    margin-right: 8px;
+.check,
+.radio {
+  margin-right: 8px;
+}
+
+.contenedorCheckbox > label {
+  display: flex;
+  align-items: center;
+}
+
+.contenedorCheckbox > label:hover {
+  cursor: pointer;
+}
+
+.contenedorCheckbox > label > input:hover {
+  cursor: pointer;
 }

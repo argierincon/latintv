@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import firebase from 'firebase';
 
 import reducer from './reducers';
@@ -24,4 +24,10 @@ firebase.initializeApp(firebaseConfig);
 const store = createStore(reducer, {});
 
 var mountNode = document.getElementById('app');
-ReactDOM.render(<Provider store={store}> <App /> </Provider>, mountNode);
+ReactDOM.render(
+  <Provider store={store}>
+    {' '}
+    <App />{' '}
+  </Provider>,
+  mountNode
+);
