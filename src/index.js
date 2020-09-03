@@ -21,7 +21,12 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const initialState = {
-  programa: 'Al Fondo Hay Sitio',
+  marcaProducto: null,
+  tipoDePublicidad: null,
+  linkPublicidad: null,
+  programa: null,
+  fecha: null,
+  hora: null,
 };
 const store = createStore(reducer, initialState);
 

@@ -16,17 +16,35 @@ import '../assets/estilos/vistas/flujoFechaHora.scss';
 
 const FlujoFechaHora = (props) => {
   const { programa } = props;
+  console.log('------ pto programa', programa);
 
-  const [datosFormulario, serDatosFormulario] = useState({
-    fecha: null,
+  const [datosFormulario, setDatosFormulario] = useState({
+    fecha: {
+      Lunes: false,
+      Martes: false,
+      Miércoles: false,
+      Jueves: false,
+      Viernes: false,
+      Sabado: false,
+      Domingo: false,
+    },
     hora: null,
   });
 
-  const handleChange = (e) => {
+  const handleRadio = (e) => {
     setDatosFormulario({
       ...datosFormulario,
-      [e.target.name]: e.target.value,
+      hora: e.target.value,
     });
+    console.log(datosFormulario);
+  };
+
+  const handleCheckbox = (e) => {
+    datosFormulario.fecha = {
+      ...datosFormulario.fecha,
+      [e.target.value]: e.target.checked,
+    };
+    setDatosFormulario({ ...datosFormulario });
     console.log(datosFormulario);
   };
 
@@ -67,9 +85,9 @@ const FlujoFechaHora = (props) => {
         {programacion.length > 0 &&
           programacion.map((ele) => (
             <SeleccionFecha
-              id={ele.hora[0]}
-              value={ele.hora[0]}
-              key={ele.hora}
+              dias={ele.dia}
+              onChange={handleCheckbox}
+              key={`dias${ele.nombre}`}
             />
           ))}
         <div className="contenedorSubInfo">
@@ -79,10 +97,22 @@ const FlujoFechaHora = (props) => {
             Selecciona una opción para la transmición de tu publicidad.{' '}
           </p>
         </div>
-        <SeleccionHora />
+        {programacion.length > 0 &&
+          programacion.map((ele) => (
+            <SeleccionHora
+              horas={ele.hora}
+              key={`horas${ele.nombre}`}
+              onChange={handleRadio}
+            />
+          ))}
         <div className="contenedorBotones">
-          <Boton namebutton="Atrás" estilo="back" link="/reservadetalle" />
-          <Boton namebutton="Siguiente" estilo="next" link="/reservadetalle" />
+          <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
+          <Boton
+            onClick={handleClick}
+            namebutton="Continuar"
+            estilo="next"
+            link="/reservadetalle"
+          />
         </div>
       </div>
     </ContenedorFormulario>
