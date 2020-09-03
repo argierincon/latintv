@@ -6,7 +6,6 @@ import Input from '../Componentes/Input';
 import TipoPublicidad from './TipoPublicidad';
 import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario';
 import { FlujoProceso } from '../componentes/FlujoProceso';
-import { InfoHead } from '../componentes/InfoHead';
 import { Boton } from '../componentes/Boton';
 
 import SelectSingleExample from '../componentes/SelectSingleExample';
@@ -50,7 +49,6 @@ const FlujoProducto = (props) => {
       <div>
         <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
         <p className="subtitulo2 marginText">Elige tu producto</p>
-        <Input name="marcaProducto" onChange={handleChange} />
         <SelectSingleExample name="selector" onChange={handleChange} />
         <p className="subtitulo2 marginText">Elige el tipo de publicidad</p>
         <TipoPublicidad onChange={handleRadio} />
