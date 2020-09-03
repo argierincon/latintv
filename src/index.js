@@ -20,14 +20,15 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-const store = createStore(reducer, {});
+const initialState = {
+  programa: 'Al Fondo Hay Sitio',
+};
+const store = createStore(reducer, initialState);
 
 var mountNode = document.getElementById('app');
 ReactDOM.render(
   <Provider store={store}>
-    {' '}
-    <App />{' '}
+    <App />
   </Provider>,
   mountNode
 );

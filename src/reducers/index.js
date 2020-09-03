@@ -18,6 +18,8 @@ const reducer = (state, action) => {
         fecha: action.payload.fecha,
         hora: action.payload.hora,
       };
+    default:
+      return state;
   }
 };
 
