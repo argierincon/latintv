@@ -14,8 +14,8 @@
     font-size: $fontSize;
 }
 @mixin definirTamaños($width, $height){
-    width: $width !important;
-    height: $height !important;
+    width: $width;
+    height: $height;
 }
 @mixin definirFlex($display, $align, $justify){
     display: $display;

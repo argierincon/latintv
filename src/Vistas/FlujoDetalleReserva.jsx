@@ -6,6 +6,7 @@ import 'firebase/firestore';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
 import { Boton } from '../componentes/Boton';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -52,7 +53,9 @@ const FlujoDetalleReserva = (props) => {
   const fechaTransformada = Object.entries(fecha).filter((ele) => ele[1]);
 
   return (
-    <div className="contenedorFlujoFH">
+    <>
+    <BarraLateral></BarraLateral>
+      <div className="contenedorFlujoFH">
       <FlujoProceso
         producto="check"
         programa="check"
@@ -93,6 +96,8 @@ const FlujoDetalleReserva = (props) => {
         />
       </div>
     </div>
+ </>
+    
   );
 };
 

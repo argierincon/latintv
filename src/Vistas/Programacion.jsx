@@ -1,12 +1,14 @@
 import React from 'react';
 
 import { Calendario } from '../componentes/Calendario';
-
 import '../assets/estilos/vistas/programacion.scss';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral'
 
 const Programacion = () => (
   <>
+   <BarraLateral/>
     <div className="contenedorProgramacion">
+    
       <h3>¡Bienvenido, Agencia Fantasía!</h3>
       <div className="contenedorSub">
         <p className="subtitulo2"> Fecha </p>
