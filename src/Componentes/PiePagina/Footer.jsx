@@ -3,7 +3,7 @@ import './Footer.scss';
 
 const Footer = () => (
   <div className="footer">
-    <table class="footer-font">
+    <table className="footer-font">
       <tbody>
         <tr>
           <td>CATEGORÍAS</td>
