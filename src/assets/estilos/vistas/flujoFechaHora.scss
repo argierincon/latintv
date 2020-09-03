@@ -27,14 +27,18 @@ h3 {
 }
 
 .subtitulo2 {
+  //font-family: Sintony;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
+  display: flex;
+  align-items: center;
   letter-spacing: 0.025em;
-  color: #3f3838;
 
-  margin: 10px 0;
+/* Primary Text */
+
+  color: #3F3838;
 }
 
 .body1 {
@@ -71,6 +75,25 @@ h3 {
   margin: 10px 0;
 }
 
+.contenedorSelector > input {
+  width: 600px;
+  height: 48px;
+  background: #FAFAFA;
+  /* Background Dark */
+
+  border: 1.5px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
 .flujoProd {
   margin: auto;
+}
+
+.marginText {
+  margin: 25px 0;
+}
+
+.marginTitulo {
+  margin: 35px 0;
 }

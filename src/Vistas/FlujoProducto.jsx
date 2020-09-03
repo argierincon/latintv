@@ -9,6 +9,8 @@ import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
 import { Boton } from '../componentes/Boton';
 
+import SelectSingleExample from '../componentes/SelectSingleExample';
+
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
 const FlujoProducto = (props) => {
@@ -16,9 +18,11 @@ const FlujoProducto = (props) => {
     marcaProducto: null,
     tipoDePublicidad: null,
     linkPublicidad: null,
+    selector: null,
   });
 
   const handleChange = (e) => {
+    console.log(e);
     setDatosFormulario({
       ...datosFormulario,
       [e.target.name]: e.target.value,
@@ -40,16 +44,18 @@ const FlujoProducto = (props) => {
 
   return (
     <ContenedorFormulario>
-      <div className="contenedorFlujoFH flujoProd">
-        <FlujoProceso producto="check" />
-        <div>
-          <InfoHead titulo="Ingresa tu producto" />
-          <Input name="marcaProducto" onChange={handleChange} />
-          <InfoHead titulo="Elige el tipo de publicidad" />
-          <TipoPublicidad onChange={handleRadio} />
-          <InfoHead titulo="Pega la url de tu spot publicitario." />
-          <Input name="linkPublicidad" onChange={handleChange} />
-        </div>
+      <FlujoProceso producto="check" />
+      <div>
+        <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
+        <p className="subtitulo2 marginText">Elige tu producto</p>
+        <Input name="marcaProducto" onChange={handleChange} />
+        <SelectSingleExample name="selector" onChange={handleChange} />
+        <p className="subtitulo2 marginText">Elige el tipo de publicidad</p>
+        <TipoPublicidad onChange={handleRadio} />
+        <p className="subtitulo2 marginText">
+          Pega la url de tu spot publicitario.
+        </p>
+        <Input name="linkPublicidad" onChange={handleChange} />
       </div>
       <div className="contenedorBotones">
         <Boton namebutton="Atrás" estilo="back" link="/" />
