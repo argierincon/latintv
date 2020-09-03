@@ -87,12 +87,10 @@ const FlujoProgramacion = (props) => {
       <BarraLateral></BarraLateral>
       <ContenedorFormulario>
         <FlujoProceso producto="check" programa="check" />
-        <InfoHead
-          titulo={'Elige un programa'}
-          info={
-            'Selecciona un programa en el que deseas la transmisión de tu espacio publicitario.'
-          }
-        />
+        <div className='contenedorTexto' >
+          <h3 className="marginTitulo">Elige un programa</h3>
+          <p className="body1">Selecciona un programa en el que deseas la transmisión de tu espacio publicitario.</p>
+        </div>
 
         <Categorias categorias="Noticias y deportes">
           {noticias.map((ele) => (
