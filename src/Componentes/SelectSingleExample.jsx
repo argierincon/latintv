@@ -37,7 +37,8 @@ export const SelectSingleExample = () => {
         className="single-select"
         classNamePrefix="react-select"
         options={listProd}
-        placeholder="Elije un producto"
+        placeholder="Busca el nombre del producto"
+        onSelected={() => undefined}
       />
     </>
   );
