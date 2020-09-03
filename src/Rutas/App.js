@@ -8,6 +8,7 @@ import FlujoFechaHora from '../vistas/FlujoFechaHora';
 import Navbar from '../Componentes/BarraLateral/BarraLateral';
 import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
 import TipoPrograma from '../vistas/TipoPrograma';
+import PruebaSelector from '../vistas/PruebaSelector';
 
 const App = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => (
     <Route exact path="/reservafechahora" component={FlujoFechaHora} />{' '}
     <Route exact path="/reservadetalle" component={FlujoDetalleReserva} />{' '}
     <Route exact path="/tipoprogramas" component={TipoPrograma} />{' '}
+    <Route exact path="/prueba" component={PruebaSelector} />{' '}
   </BrowserRouter>
 );
 
