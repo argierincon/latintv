@@ -71,17 +71,14 @@ const FlujoFechaHora = (props) => {
 
   return (
     <ContenedorFormulario>
-      <div className="contenedorFlujoFH">
-        <FlujoProceso producto="check" programa="check" fecha="check" />
-        <InfoHead titulo="Elige fecha y hora" />
-        <div className="contenedorSubInfo">
-          <p className="subtitulo2"> Fecha </p>
-          <p className="body1">
-            {' '}
-            Del lunes 17 al domingo 23 puedes seleccionar una o más opciones
-            para la transmición de tu publicidad.{' '}
-          </p>
-        </div>
+      <FlujoProceso producto="check" programa="check" fecha="check" />
+      <div>
+        <h3 className="marginTitulo">Elige fecha y hora</h3>
+        <p className="subtitulo2 marginText"> Fecha </p>
+        <p className="body1">
+          Del lunes 17 al domingo 23 puedes seleccionar una o más opciones para
+          la transmición de tu publicidad.{' '}
+        </p>
         {programacion.length > 0 &&
           programacion.map((ele) => (
             <SeleccionFecha
@@ -90,13 +87,11 @@ const FlujoFechaHora = (props) => {
               key={`dias${ele.nombre}`}
             />
           ))}
-        <div className="contenedorSubInfo">
-          <p className="subtitulo2"> Hora </p>
-          <p className="body1">
-            {' '}
-            Selecciona una opción para la transmición de tu publicidad.{' '}
-          </p>
-        </div>
+        <p className="subtitulo2 marginText"> Hora </p>
+        <p className="body1">
+          {' '}
+          Selecciona una opción para la transmición de tu publicidad.{' '}
+        </p>
         {programacion.length > 0 &&
           programacion.map((ele) => (
             <SeleccionHora
@@ -105,15 +100,15 @@ const FlujoFechaHora = (props) => {
               onChange={handleRadio}
             />
           ))}
-        <div className="contenedorBotones">
-          <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
-          <Boton
-            onClick={handleClick}
-            namebutton="Continuar"
-            estilo="next"
-            link="/reservadetalle"
-          />
-        </div>
+      </div>
+      <div className="contenedorBotones">
+        <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
+        <Boton
+          onClick={handleClick}
+          namebutton="Continuar"
+          estilo="next"
+          link="/reservadetalle"
+        />
       </div>
     </ContenedorFormulario>
   );

@@ -11,7 +11,7 @@ import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
 import IngresoForm from '../Componentes/Ingreso/IngresoForm';
 import RegistroForm from '../Componentes/Registro/RegistroForm';
 import CorreoEnviado from '../Componentes/Registro/CorreoEnviado';
-import Footer from '../Componentes/PiePagina/Footer';
+//import Footer from '../Componentes/PiePagina/Footer';
 
 import TipoPrograma from '../vistas/TipoPrograma';
 import PruebaSelector from '../vistas/PruebaSelector';
@@ -32,7 +32,6 @@ const App = () => (
       <Route exact path="/reservaproducto" component={TipoPrograma} />{' '}
       <Route exact path="/prueba" component={PruebaSelector} />{' '}
     </Switch>{' '}
-    <Footer />
   </BrowserRouter>
 );
 
