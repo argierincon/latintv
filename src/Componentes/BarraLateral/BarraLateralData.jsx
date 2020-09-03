@@ -5,39 +5,28 @@ import * as IoIcons from 'react-icons/io';
 
 export const BarraLateralData = [
     {
-        titulo: 'Inicio',
-        ruta: '/',
+        titulo: 'Programación Semanal',
+        ruta: '/programacionsemanal',
         icono: <AiIcons.AiFillHome />,
         clase: 'nav-text'
     },
+    // {
+    //     titulo: 'Programación Semanal',
+    //     ruta: '/reservaprograma',
+    //     icono: <FaIcons.FaCartPlus />,
+    //     clase: 'nav-text'
+    // },
     {
-        titulo: 'Reserva',
-        ruta: '/reserva',
+        titulo: 'Generar reserva',
+        ruta: '/reservaproducto',
         icono: <FaIcons.FaCartPlus />,
         clase: 'nav-text'
-    },
+    }
+    ,
     {
-        titulo: 'Programación',
-        ruta: '/programacion',
-        icono: <FaIcons.FaCartPlus />,
-        clase: 'nav-text'
-    },
-    {
-        titulo: 'FlujoFechaHora',
-        ruta: '/procesofechahora',
+        titulo: 'Historial de reservas',
+        ruta: '/reservafechahora',
         icono: <IoIcons.IoMdPeople />,
-        clase: 'nav-text'
-    },
-    {
-        titulo: 'Mensajes',
-        ruta: '/messages',
-        icono: <FaIcons.FaEnvelopeOpenText />,
-        clase: 'nav-text'
-    },
-    {
-        titulo: 'Support',
-        ruta: '/support',
-        icono: <IoIcons.IoMdHelpCircle />,
         clase: 'nav-text'
     }
 ];

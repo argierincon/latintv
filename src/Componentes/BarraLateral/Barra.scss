@@ -1,5 +1,7 @@
+@import './estilosCompartidos';
+
 .navbar {
-  background-color: #060b26;
+  background-color: #003459;
   height: 80px;
   display: flex;
   justify-content: start;
@@ -13,8 +15,8 @@
 }
 
 .nav-menu {
-  background-color: #060b26;
-  width: 250px;
+  background-color: #003459;
+  width: 360px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -27,6 +29,7 @@
 .nav-menu.active {
   left: 0;
   transition: 350ms;
+  z-index: 999;
 }
 
 .nav-text {
@@ -59,7 +62,7 @@
 }
 
 .navbar-toggle {
-  background-color: #060b26;
+  background-color: #003459;
   width: 100%;
   height: 80px;
   display: flex;
@@ -70,3 +73,65 @@
 span {
   margin-left: 16px;
 }
+
+.btnHeader{
+  @include definirTamaños(33%, 88%);
+  // @include definirColores(#F0B02F, #1C1712);
+  // border: {
+  //     style: solid;
+  //     color: #FFFFFF;
+  //     width: 5px 5px 5px 0px;/* top, right, bottom and left */
+  // };
+  @include tamanoLetra(21px);
+  @include definirFlex(flex, center, center);
+  color: white;
+}
+
+.contenedorBtn{
+  @include definirTamaños(70%, 100%);
+  @include flexDirection;
+  text-align: right;
+}
+
+.contenedorLogo{
+  width: 30%;
+  @include definirFlex(flex, center, center);
+  flex-direction: row;
+  text-align: left;
+  // z-index: 9999;
+}
+.logo{
+  @include definirTamaños(16%, 10%);
+}
+
+header{
+  @include definirTamaños(90%, 78px);
+  @include flexDirection;
+  // @include definirColores(#412A21, #FFFFFF);
+  margin: 0; 
+}
+
+@media screen and (min-width:650px) {
+  header{
+    display: block;
+    @include definirTamaños(90%, 78px);
+    @include flexDirection;
+  }
+  .btnHeader{
+      border-width: 3px 3px 4px 0px; /* top, right, bottom and left */
+      @include tamanoLetra(20px);
+  }
+}
+
+@media screen and (max-width:742px) {
+  header{
+      display: none;
+  }
+  .btnHeader{
+      border-width: 3px 3px 4px 0px; /* top, right, bottom and left */
+      @include tamanoLetra(20px);
+  }
+}
+
+
+
