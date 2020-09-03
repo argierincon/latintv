@@ -33,6 +33,18 @@ const FlujoDetalleReserva = (props) => {
       .then(() => console.log('listo'));
   };
 
+  const costoTipoPrograma = {
+    'A+': 5000,
+    B: 3000,
+  };
+
+  const calculoReserva = (
+    recargoEmpresa,
+    tipoPublicidad,
+    costoPrograma,
+    recargoHora
+  ) => {};
+
   return (
     <div className="contenedorFlujoFH">
       <FlujoProceso

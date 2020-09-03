@@ -16,6 +16,8 @@ const FlujoProducto = (props) => {
     marcaProducto: null,
     tipoDePublicidad: null,
     linkPublicidad: null,
+    recargoEmpresa: null,
+    costoPublicidad: null,
   });
 
   const handleChange = (e) => {

@@ -14,11 +14,15 @@ import { Boton } from '../componentes/Boton';
 const FlujoProgramacion = (props) => {
   const [datosFormulario, setDatosFormulario] = useState({
     programa: null,
+    costoPrograma: null,
+    recargoHorario: null,
   });
 
   const handleChange = (e) => {
     setDatosFormulario({
       programa: e.target.value,
+      costoPrograma: e.target.dataset.costo,
+      recargoPrograma: e.target.dataset.recargo,
     });
     console.log(datosFormulario);
   };
@@ -94,6 +98,8 @@ const FlujoProgramacion = (props) => {
             name="programa"
             id={ele.nombre}
             key={ele.nombre}
+            costo={ele.costo}
+            recargo={ele.recargo}
           />
         ))}
       </Categorias>
@@ -105,6 +111,8 @@ const FlujoProgramacion = (props) => {
             name="programa"
             id={ele.nombre}
             key={ele.nombre}
+            costo={ele.costo}
+            recargo={ele.recargo}
           />
         ))}
       </Categorias>
@@ -116,6 +124,8 @@ const FlujoProgramacion = (props) => {
             name="programa"
             id={ele.nombre}
             key={ele.nombre}
+            costo={ele.costo}
+            recargo={ele.recargo}
           />
         ))}
       </Categorias>
