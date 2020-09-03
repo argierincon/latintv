@@ -10,6 +10,7 @@ import { InfoHead } from '../componentes/InfoHead';
 import { Boton } from '../componentes/Boton';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral'
 
 const FlujoProducto = (props) => {
   const [datosFormulario, setDatosFormulario] = useState({
@@ -39,6 +40,8 @@ const FlujoProducto = (props) => {
   };
 
   return (
+    <>
+    <BarraLateral/>
     <ContenedorFormulario>
       <div className="contenedorFlujoFH flujoProd">
         <FlujoProceso producto="check" />
@@ -61,6 +64,7 @@ const FlujoProducto = (props) => {
         />{' '}
       </div>
     </ContenedorFormulario>
+    </>
   );
 };
 

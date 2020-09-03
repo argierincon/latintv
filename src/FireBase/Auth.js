@@ -46,10 +46,8 @@ export const signingInGoogle = () => {
   const providerGoogle = new firebase.auth.GoogleAuthProvider();
    
    firebase.auth().signInWithPopup(providerGoogle).then((result) => {
-     console.log('logeo exitoso con google', result);
-     //redirecciona pantalla inicio
-    //  location.href = '/Inicio'
-     window.location.href = '/programacionsemanal';
+      window.location.href = '/programacionsemanal';
+     
   })
     .catch((err) => {
       console.log('error al logearse con google', err);
