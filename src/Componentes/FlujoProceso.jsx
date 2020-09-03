@@ -29,10 +29,10 @@ export const FlujoProceso = ({
       </div>
       <div className="step">
         <div>
-          {reserva === 'sinCheck' ? (
-            <div className={reserva}></div>
+          {programa === 'sinCheck' ? (
+            <div className={programa}></div>
           ) : (
-            <FontAwesomeIcon className={reserva} icon={faCheckCircle} />
+            <FontAwesomeIcon className={programa} icon={faCheckCircle} />
           )}
         </div>
         <p>Programa</p>
