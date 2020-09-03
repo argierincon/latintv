@@ -13,7 +13,7 @@ const FlujoFechaHora = () => {
     <div className="contenedorFlujoFH">
       <FlujoProceso producto="check" programa="check" fecha="check" />
       <InfoHead titulo="Elige fecha y hora" />
-      <div className='contenedorSubInfo' >
+      <div className="contenedorSubInfo">
         <p className="subtitulo2"> Fecha </p>
         <p className="body1">
           {' '}
