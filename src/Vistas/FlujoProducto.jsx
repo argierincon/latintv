@@ -7,6 +7,7 @@ import TipoPublicidad from './TipoPublicidad';
 import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
+import { Boton } from '../componentes/Boton';
 import { SeleccionFecha } from '../componentes/SeleccionFecha';
 import { SeleccionHora } from '../componentes/SeleccionHora';
 
@@ -44,6 +45,10 @@ const FlujoProducto = (props) => {
           <Input name="linkPublicidad" onChange={handleChange} />
         </div>
       </div>
+      <div className="contenedorBotones">
+        <Boton namebutton="Atrás" estilo="back" link="/reservadetalle" />
+        <Boton namebutton="Continuar" estilo="next" link="/reservadetalle" />
+      </div>
     </ContenedorFormulario>
   );
 };
@@ -53,8 +58,3 @@ const mapDispatchToProps = {
 };
 
 export default withRouter(connect(null, mapDispatchToProps)(FlujoProducto));
-
-/*
-<label for="cars">Elige un prod</label>
-<option value="prod" selected>Prod</option>
-*/

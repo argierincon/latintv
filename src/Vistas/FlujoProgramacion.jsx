@@ -9,6 +9,7 @@ import Programa from '../Componentes/Programa/Programa.jsx';
 import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario.jsx';
 import { FlujoProceso } from '../Componentes/FlujoProceso';
 import { InfoHead } from '../Componentes/InfoHead';
+import { Boton } from '../componentes/Boton';
 
 const FlujoProgramacion = (props) => {
   const [datosFormulario, setDatosFormulario] = useState({
@@ -17,8 +18,7 @@ const FlujoProgramacion = (props) => {
 
   const handleChange = (e) => {
     setDatosFormulario({
-      ...datosFormulario,
-      [e.target.name]: e.target.value,
+      programa: e.target.value,
     });
     console.log(datosFormulario);
   };
@@ -79,7 +79,7 @@ const FlujoProgramacion = (props) => {
 
   return (
     <ContenedorFormulario>
-      <FlujoProceso />
+      <FlujoProceso producto="check" programa="check" />
       <InfoHead
         titulo={'Elige un programa'}
         info={
@@ -119,6 +119,15 @@ const FlujoProgramacion = (props) => {
           />
         ))}
       </Categorias>
+      <div className="contenedorBotones">
+        <Boton namebutton="Atrás" estilo="back" link="/reservadetalle" />
+        <Boton
+          namebutton="Continuar"
+          estilo="next"
+          link="/reservafechahora"
+          onClick={handleClick}
+        />
+      </div>
     </ContenedorFormulario>
   );
 };

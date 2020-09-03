@@ -6,6 +6,7 @@ export const setProducto = (payload) => {
 };
 
 export const setPrograma = (payload) => {
+  console.log('payload --------', payload);
   return {
     type: 'SET_PROGRAMA',
     payload,
