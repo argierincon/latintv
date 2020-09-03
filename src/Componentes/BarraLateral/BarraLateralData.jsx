@@ -29,4 +29,12 @@ export const BarraLateralData = [
         icono: <IoIcons.IoMdPeople />,
         clase: 'nav-text'
     }
+    ,
+    {
+        titulo: 'Pruebas Claudia',
+        ruta: '/prueba',
+        icono: <IoIcons.IoMdPeople />,
+        clase: 'nav-text'
+    }
+    
 ];
