@@ -24,7 +24,7 @@ const Programacion = () => (
           </div>
           <div className="opcion">
             <div className="caja sinRecargo"></div>
-            <p>Sin recargo</p>
+            <p>Precio regular</p>
           </div>
           <div className="opcion">
             <div className="caja cincoRecargo"></div>
