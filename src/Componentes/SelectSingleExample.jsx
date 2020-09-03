@@ -6,7 +6,7 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 
 //intentado mostrar los nombres de programas de empresas para luego cambiar por las marcas
-export const SelectSingleExample = () => {
+export const SelectSingleExample = ({ onChange }) => {
   const db = firebase.firestore();
   const [empresas, setEmpresas] = useState([]);
 
@@ -26,6 +26,7 @@ export const SelectSingleExample = () => {
     let prod = {};
     prod.label = elem.nombre;
     prod.value = elem.nombre;
+    prod.recargo = elem.recargo || 0;
     return prod;
   });
 
@@ -37,6 +38,7 @@ export const SelectSingleExample = () => {
         options={listProd}
         placeholder="Busca el nombre del producto"
         onSelected={() => undefined}
+        onChange={onChange}
       />
     </>
   );

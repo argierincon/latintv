@@ -13,6 +13,7 @@ const TipoPublicidad = ({ onChange }) => {
             type="radio"
             name="publicidad"
             id="tarjeta"
+            value="Tarjeta"
           />
           <div className="nombrePublicidad">
             <div className="titlePublicidad">Tarjeta</div>
@@ -35,6 +36,7 @@ const TipoPublicidad = ({ onChange }) => {
             type="radio"
             name="publicidad"
             id="activacion"
+            value="Activación en vivo"
           />
           <div className="nombrePublicidad">
             <div className="titlePublicidad">Activación en vivo</div>
@@ -49,7 +51,13 @@ const TipoPublicidad = ({ onChange }) => {
       </div>
       <div>
         <label htmlFor="spot" className="tarjetaPublicidad">
-          <input onChange={onChange} type="radio" name="publicidad" id="spot" />
+          <input
+            value="Spot"
+            onChange={onChange}
+            type="radio"
+            name="publicidad"
+            id="spot"
+          />
           <div className="nombrePublicidad">
             <div className="titlePublicidad">Spot</div>
             <hr />

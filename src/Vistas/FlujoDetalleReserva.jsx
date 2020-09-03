@@ -20,6 +20,8 @@ const FlujoDetalleReserva = (props) => {
     hora,
     costoPrograma,
     recargoHorario,
+    costoPublicidad,
+    recargoEmpresa,
   } = props;
 
   const db = firebase.firestore();
@@ -34,6 +36,8 @@ const FlujoDetalleReserva = (props) => {
         hora,
         costoPrograma,
         recargoHorario,
+        costoPublicidad,
+        recargoEmpresa,
       })
       .then(() => console.log('listo'));
   };
@@ -54,50 +58,49 @@ const FlujoDetalleReserva = (props) => {
 
   return (
     <>
-    <BarraLateral></BarraLateral>
+      <BarraLateral></BarraLateral>
       <div className="contenedorFlujoFH">
-      <FlujoProceso
-        producto="check"
-        programa="check"
-        fecha="check"
-        reserva="check"
-      />
-      <InfoHead
-        titulo="Detalles de reserva"
-        info="Verifica los detalles de reserva de tu espacio publicitario."
-      />
-      <ul>
-        <li>marca: {marcaProducto}</li>
-        <li>tipo: {tipoDePublicidad}</li>
-        <li>link: {linkPublicidad}</li>
-        <li>Programa: {programa}</li>
-        <li>
-          Día:{' '}
-          <ul>
-            {fechaTransformada.map((ele) => (
-              <li>{ele[0]}</li>
-            ))}
-          </ul>
-        </li>
-        <li>Hora: {hora}</li>
-        <li>Costo Programa: {costoPrograma}</li>
-        <li>Recargo Hora: {recargoHorario}</li>
-        <li>Recargo Empresa:</li>
-        <li>Costo Publicidad</li>
-      </ul>
-
-      <div className="contenedorBotones">
-        <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
-        <Boton
-          onClick={handleClick}
-          namebutton="Confirmar"
-          estilo="next"
-          link="/reservadetalle"
+        <FlujoProceso
+          producto="check"
+          programa="check"
+          fecha="check"
+          reserva="check"
         />
+        <InfoHead
+          titulo="Detalles de reserva"
+          info="Verifica los detalles de reserva de tu espacio publicitario."
+        />
+        <ul>
+          <li>marca: {marcaProducto}</li>
+          <li>tipo: {tipoDePublicidad}</li>
+          <li>link: {linkPublicidad}</li>
+          <li>Programa: {programa}</li>
+          <li>
+            Día:{' '}
+            <ul>
+              {fechaTransformada.map((ele) => (
+                <li key={ele[0]}>{ele[0]}</li>
+              ))}
+            </ul>
+          </li>
+          <li>Hora: {hora}</li>
+          <li>Costo Programa: {costoPrograma}</li>
+          <li>Recargo Hora: {recargoHorario}</li>
+          <li>Recargo Empresa: {costoPublicidad}</li>
+          <li>Costo Publicidad: {recargoEmpresa}</li>
+        </ul>
+
+        <div className="contenedorBotones">
+          <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
+          <Boton
+            onClick={handleClick}
+            namebutton="Confirmar"
+            estilo="next"
+            link="/reservadetalle"
+          />
+        </div>
       </div>
-    </div>
- </>
-    
+    </>
   );
 };
 
