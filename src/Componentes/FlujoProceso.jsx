@@ -7,7 +7,7 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import '../assets/estilos/componentes/flujoProceso.scss';
 
 export const FlujoProceso = ({
-  producto = 'check',
+  producto = 'sinCheck',
   programa = 'sinCheck',
   fecha = 'sinCheck',
   reserva = 'sinCheck',
@@ -17,7 +17,7 @@ export const FlujoProceso = ({
       <div className="step">
         <div>
           {producto === 'sinCheck' ? (
-            <div className={reserva}></div>
+            <div className={producto}></div>
           ) : (
             <FontAwesomeIcon className={producto} icon={faCheckCircle} />
           )}
@@ -29,10 +29,10 @@ export const FlujoProceso = ({
       </div>
       <div className="step">
         <div>
-          {programa === 'sinCheck' ? (
+          {reserva === 'sinCheck' ? (
             <div className={reserva}></div>
           ) : (
-            <FontAwesomeIcon className={producto} icon={faCheckCircle} />
+            <FontAwesomeIcon className={reserva} icon={faCheckCircle} />
           )}
         </div>
         <p>Programa</p>
@@ -43,7 +43,7 @@ export const FlujoProceso = ({
       <div className="step">
         <div>
           {fecha === 'sinCheck' ? (
-            <div className={reserva}></div>
+            <div className={fecha}></div>
           ) : (
             <FontAwesomeIcon className={fecha} icon={faCheckCircle} />
           )}
