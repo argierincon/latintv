@@ -10,7 +10,7 @@ import { InfoHead } from '../componentes/InfoHead';
 import { SeleccionFecha } from '../componentes/SeleccionFecha';
 import { SeleccionHora } from '../componentes/SeleccionHora';
 import { Boton } from '../componentes/Boton';
-import BarraLateral from '../Componentes/BarraLateral/BarraLateral'
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -71,48 +71,48 @@ const FlujoFechaHora = (props) => {
 
   return (
     <>
-    <BarraLateral/>
-    <ContenedorFormulario>
-      <FlujoProceso producto="check" programa="check" fecha="check" />
-      <div>
-        <h3 className="marginTitulo">Elige fecha y hora</h3>
-        <p className="subtitulo2 marginText"> Fecha </p>
-        <p className="body1">
-          Del lunes 17 al domingo 23 puedes seleccionar una o más opciones para
-          la transmición de tu publicidad.{' '}
-        </p>
-        {programacion.length > 0 &&
-          programacion.map((ele) => (
-            <SeleccionFecha
-              dias={ele.dia}
-              onChange={handleCheckbox}
-              key={`dias${ele.nombre}`}
-            />
-          ))}
-        <p className="subtitulo2 marginText"> Hora </p>
-        <p className="body1">
-          {' '}
-          Selecciona una opción para la transmición de tu publicidad.{' '}
-        </p>
-        {programacion.length > 0 &&
-          programacion.map((ele) => (
-            <SeleccionHora
-              horas={ele.hora}
-              key={`horas${ele.nombre}`}
-              onChange={handleRadio}
-            />
-          ))}
-      </div>
-      <div className="contenedorBotones">
-        <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
-        <Boton
-          onClick={handleClick}
-          namebutton="Continuar"
-          estilo="next"
-          link="/reservadetalle"
-        />
-      </div>
-    </ContenedorFormulario>
+      <BarraLateral />
+      <ContenedorFormulario>
+        <FlujoProceso producto="check" programa="check" fecha="check" />
+        <div>
+          <h3 className="marginTitulo">Elige fecha y hora</h3>
+          <p className="subtitulo2 marginText"> Fecha </p>
+          <p className="body1">
+            Del lunes 17 al domingo 23 puedes seleccionar una o más opciones
+            para la transmición de tu publicidad.{' '}
+          </p>
+          {programacion.length > 0 &&
+            programacion.map((ele) => (
+              <SeleccionFecha
+                dias={ele.dia}
+                onChange={handleCheckbox}
+                key={`dias${ele.nombre}`}
+              />
+            ))}
+          <p className="subtitulo2 marginText"> Hora </p>
+          <p className="body1">
+            {' '}
+            Selecciona una opción para la transmición de tu publicidad.{' '}
+          </p>
+          {programacion.length > 0 &&
+            programacion.map((ele) => (
+              <SeleccionHora
+                horas={ele.hora}
+                key={`horas${ele.nombre}`}
+                onChange={handleRadio}
+              />
+            ))}
+        </div>
+        <div className="contenedorBotones">
+          <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
+          <Boton
+            onClick={handleClick}
+            namebutton="Continuar"
+            estilo="next"
+            link="/reservadetalle"
+          />
+        </div>
+      </ContenedorFormulario>
     </>
   );
 };
