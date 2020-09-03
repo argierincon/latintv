@@ -1,4 +1,5 @@
 import React from 'react';
+import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { InfoHead } from '../componentes/InfoHead';
 import { SeleccionFecha } from '../componentes/SeleccionFecha';
@@ -6,7 +7,6 @@ import { SeleccionHora } from '../componentes/SeleccionHora';
 import { Boton } from '../componentes/Boton';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
-
 
 const FlujoFechaHora = () => {
   return (
@@ -22,7 +22,7 @@ const FlujoFechaHora = () => {
         </p>
       </div>
       <SeleccionFecha />
-      <div className='contenedorSubInfo' >
+      <div className="contenedorSubInfo">
         <p className="subtitulo2"> Hora </p>
         <p className="body1">
           {' '}
@@ -30,9 +30,9 @@ const FlujoFechaHora = () => {
         </p>
       </div>
       <SeleccionHora />
-      <div className='contenedorBotones' >
-        <Boton namebutton='Atrás' estilo='back' link='/reservadetalle'/>
-        <Boton namebutton='Siguiente' estilo='next' link='/reservadetalle'/>
+      <div className="contenedorBotones">
+        <Boton namebutton="Atrás" estilo="back" link="/reservadetalle" />
+        <Boton namebutton="Siguiente" estilo="next" link="/reservadetalle" />
       </div>
     </div>
   );
