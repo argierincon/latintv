@@ -15,11 +15,15 @@ import BarraLateral from '../Componentes/BarraLateral/BarraLateral'
 const FlujoProgramacion = (props) => {
   const [datosFormulario, setDatosFormulario] = useState({
     programa: null,
+    costoPrograma: null,
+    recargoHorario: null,
   });
 
   const handleChange = (e) => {
     setDatosFormulario({
       programa: e.target.value,
+      costoPrograma: e.target.dataset.costo,
+      recargoPrograma: e.target.dataset.recargo,
     });
     console.log(datosFormulario);
   };
@@ -80,7 +84,7 @@ const FlujoProgramacion = (props) => {
 
   return (
     <>
-      <BarraLateral/>
+    <BarraLateral></BarraLateral>
       <ContenedorFormulario>
         <FlujoProceso producto="check" programa="check" />
         <InfoHead
@@ -88,6 +92,54 @@ const FlujoProgramacion = (props) => {
           info={
             'Selecciona un programa en el que deseas la transmisión de tu espacio publicitario.'
           }
+      />
+
+      <Categorias categorias="Noticias y deportes">
+        {noticias.map((ele) => (
+          <Programa
+            onChange={handleChange}
+            nombrePrograma={ele.nombre}
+            name="programa"
+            id={ele.nombre}
+            key={ele.nombre}
+            costo={ele.costo}
+            recargo={ele.recargo}
+          />
+        ))}
+      </Categorias>
+      <Categorias categorias="Entretenimiento">
+        {entretenimiento.map((ele) => (
+          <Programa
+            onChange={handleChange}
+            nombrePrograma={ele.nombre}
+            name="programa"
+            id={ele.nombre}
+            key={ele.nombre}
+            costo={ele.costo}
+            recargo={ele.recargo}
+          />
+        ))}
+      </Categorias>
+      <Categorias categorias="Novelas y series">
+        {novelas.map((ele) => (
+          <Programa
+            onChange={handleChange}
+            nombrePrograma={ele.nombre}
+            name="programa"
+            id={ele.nombre}
+            key={ele.nombre}
+            costo={ele.costo}
+            recargo={ele.recargo}
+          />
+        ))}
+      </Categorias>
+      <div className="contenedorBotones">
+        <Boton namebutton="Atrás" estilo="back" link="/reservaproducto" />
+        <Boton
+          namebutton="Continuar"
+          estilo="next"
+          link="/reservafechahora"
+          onClick={handleClick}
         />
         <Categorias categorias="Noticias y deportes">
           {noticias.map((ele) => (
@@ -132,6 +184,7 @@ const FlujoProgramacion = (props) => {
           />
         </div>
       </ContenedorFormulario>
+      
     </>
   );
 };

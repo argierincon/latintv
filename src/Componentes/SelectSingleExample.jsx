@@ -5,26 +5,24 @@ import Select from '@atlaskit/select';
 import firebase from 'firebase';
 import 'firebase/firestore';
 
-//intentado mostrar los nombres de programas de entretenimiento para luego cambiar por las marcas
+//intentado mostrar los nombres de programas de empresas para luego cambiar por las marcas
 export const SelectSingleExample = () => {
   const db = firebase.firestore();
-  const [entretenimiento, setEntretenimiento] = useState([]);
+  const [empresas, setEmpresas] = useState([]);
 
   useEffect(() => {
-    db.collection('programacion')
-      .where('categoria', '==', 'entretenimiento')
-      .orderBy('num', 'asc')
+    db.collection('empresas-marcas')
       .get()
       .then((querySnapShot) => {
         querySnapShot.forEach((doc) => {
           const programas = doc.data();
-          entretenimiento.push(programas);
+          empresas.push(programas);
         });
-        setEntretenimiento([...entretenimiento]);
+        setEmpresas([...empresas]);
       });
   }, []);
 
-  const listProd = entretenimiento.map((elem) => {
+  const listProd = empresas.map((elem) => {
     let prod = {};
     prod.label = elem.nombre;
     prod.value = elem.nombre;
@@ -37,7 +35,8 @@ export const SelectSingleExample = () => {
         className="single-select"
         classNamePrefix="react-select"
         options={listProd}
-        placeholder="Elije un producto"
+        placeholder="Busca el nombre del producto"
+        onSelected={() => undefined}
       />
     </>
   );

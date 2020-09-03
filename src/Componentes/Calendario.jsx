@@ -7,7 +7,7 @@ import '../assets/estilos/componentes/calendario.scss';
 
 export const Calendario = () => {
   return (
-    <table class="table table-hover">
+    <table className="table table-hover">
       <thead>
         <tr>
           <th scope="col" className='cabeceraTabla'> Horario</th>

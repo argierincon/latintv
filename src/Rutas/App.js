@@ -17,7 +17,6 @@ import TipoPrograma from '../vistas/TipoPrograma';
 import PruebaSelector from '../vistas/PruebaSelector';
 
 const App = () => (
-  
   <BrowserRouter>
       <Switch>    
         <Route exact path="/Inicio" component={Inicio} />{' '}
@@ -40,19 +39,6 @@ const App = () => (
      {/*<Footer/>*/} 
     </BrowserRouter>
 
-// import TipoPrograma from '../vistas/TipoPrograma';
-// import PruebaSelector from '../vistas/PruebaSelector';
-
-// const App = () => (
-//   <BrowserRouter>
-//     <Route exact path="/" component={Programacion} />{' '}
-//     <Route exact path="/reservaproducto" component={FlujoProducto} />{' '}
-//     <Route exact path="/reservaprograma" component={FlujoProgramacion} />{' '}
-//     <Route exact path="/reservafechahora" component={FlujoFechaHora} />{' '}
-//     <Route exact path="/reservadetalle" component={FlujoDetalleReserva} />{' '}
-//     <Route exact path="/tipoprogramas" component={TipoPrograma} />{' '}
-//     <Route exact path="/prueba" component={PruebaSelector} />{' '}
-//   </BrowserRouter>
 );
 
 export default App;
