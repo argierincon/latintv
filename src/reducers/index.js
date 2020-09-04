@@ -15,6 +15,7 @@ const reducer = (state, action) => {
         programa: action.payload.programa,
         costoPrograma: action.payload.costoPrograma,
         recargoHorario: action.payload.recargoHorario,
+        tipoPrograma: action.payload.tipoPrograma,
       };
     case 'SET_FECHAHORA':
       return {

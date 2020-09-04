@@ -22,6 +22,7 @@ const FlujoDetalleReserva = (props) => {
     recargoHorario,
     costoPublicidad,
     recargoEmpresa,
+    tipoPrograma,
   } = props;
 
   const db = firebase.firestore();
@@ -38,6 +39,7 @@ const FlujoDetalleReserva = (props) => {
         recargoHorario,
         costoPublicidad,
         recargoEmpresa,
+        tipoPrograma,
       })
       .then(() => console.log('listo'));
   };
@@ -86,8 +88,9 @@ const FlujoDetalleReserva = (props) => {
           <li>Hora: {hora}</li>
           <li>Costo Programa: {costoPrograma}</li>
           <li>Recargo Hora: {recargoHorario}</li>
-          <li>Recargo Empresa: {costoPublicidad}</li>
-          <li>Costo Publicidad: {recargoEmpresa}</li>
+          <li>Recargo Empresa: {recargoEmpresa}</li>
+          <li>Costo Publicidad: {costoPublicidad}</li>
+          <li>Tipo Programa: {tipoPrograma}</li>
         </ul>
 
         <div className="contenedorBotones">
@@ -114,6 +117,9 @@ const mapStateToProps = (state) => {
     hora: state.hora,
     costoPrograma: state.costoPrograma,
     recargoHorario: state.recargoHorario,
+    recargoEmpresa: state.recargoEmpresa,
+    costoPublicidad: state.costoPublicidad,
+    tipoPrograma: state.tipoPrograma,
   };
 };
 

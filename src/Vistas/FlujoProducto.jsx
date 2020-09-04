@@ -33,6 +33,7 @@ const FlujoProducto = (props) => {
     setDatosFormulario({
       ...datosFormulario,
       marcaProducto: e.value,
+      recargoEmpresa: e.recargo,
     });
     console.log(e, 'holaaaaaaa');
   };
@@ -41,6 +42,7 @@ const FlujoProducto = (props) => {
     setDatosFormulario({
       ...datosFormulario,
       tipoDePublicidad: e.target.value,
+      costoPublicidad: e.target.dataset.costo,
     });
     console.log(datosFormulario);
   };

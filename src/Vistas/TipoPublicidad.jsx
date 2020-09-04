@@ -14,6 +14,7 @@ const TipoPublicidad = ({ onChange }) => {
             name="publicidad"
             id="tarjeta"
             value="Tarjeta"
+            data-costo={690}
           />
           <div className="nombrePublicidad">
             <div className="titlePublicidad">Tarjeta</div>
@@ -37,6 +38,7 @@ const TipoPublicidad = ({ onChange }) => {
             name="publicidad"
             id="activacion"
             value="Activación en vivo"
+            data-costo={690}
           />
           <div className="nombrePublicidad">
             <div className="titlePublicidad">Activación en vivo</div>
@@ -57,6 +59,7 @@ const TipoPublicidad = ({ onChange }) => {
             type="radio"
             name="publicidad"
             id="spot"
+            data-costo={4000}
           />
           <div className="nombrePublicidad">
             <div className="titlePublicidad">Spot</div>
