@@ -4,7 +4,7 @@ import '../assets/estilos/componentes/seleccionFecha.scss';
 
 export const SeleccionHora = ({ horas, onChange }) => {
   return (
-    <div className="contenedorCheckbox">
+    <div className="contenedorCheckbox radiosHora">
       {horas.map((hora) => (
         <label htmlFor={`hora${hora}`} key={`hora${hora}`}>
           <input

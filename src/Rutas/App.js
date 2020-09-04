@@ -18,7 +18,6 @@ import PruebaSelector from '../vistas/PruebaSelector';
 import ConfirmacionReserva from '../vistas/ConfirmacionReserva';
 import HistorialReservas from '../vistas/HistorialReservas';
 
-
 const App = () => (
   <BrowserRouter>
     <Switch>
