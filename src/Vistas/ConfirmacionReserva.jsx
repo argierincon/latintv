@@ -1,15 +1,15 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
-
 import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario.jsx';
 import ImgReservado from '../componentes/ImgReservado.jsx';
 import { Boton } from '../componentes/Boton';
-
 import computadora from '../assets/statics/computadora.png';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 const ConfirmacionReserva = () => {
   return (
     <>
+      <BarraLateral></BarraLateral>
       <ContenedorFormulario>
         <div className="contenedorReservado">
           <ImgReservado img={computadora} />

@@ -25,14 +25,7 @@ export const BarraLateralData = [
     ,
     {
         titulo: 'Historial de reservas',
-        ruta: '/reservafechahora',
-        icono: <IoIcons.IoMdPeople />,
-        clase: 'nav-text'
-    }
-    ,
-    {
-        titulo: 'Pruebas Claudia',
-        ruta: '/prueba',
+        ruta: '/historial',
         icono: <IoIcons.IoMdPeople />,
         clase: 'nav-text'
     }
