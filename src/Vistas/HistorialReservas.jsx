@@ -5,13 +5,12 @@ import { TablaHistorial } from '../componentes/TablaHistorial';
 import { Paginacion } from '../componentes/Paginacion';
 import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
-
 const HistorialReservas = () => {
   return (
     <>
     <BarraLateral></BarraLateral>
       <ContenedorFormulario>
-        <div className='contenedorGralHistorial'>
+        <div className="contenedorGralHistorial">
           <div className="contenedorHeadHistorial">
             <div className="contenedorTitle">
               <h3>Historial de reservas</h3>
