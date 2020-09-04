@@ -82,12 +82,13 @@ h3 {
 .contenedorSelector > input {
   width: 600px;
   height: 48px;
-  background: #FAFAFA;
+  background: #f4f5f7;
   /* Background Dark */
 
   border: 1.5px solid #E8E8E8;
   box-sizing: border-box;
   border-radius: 5px;
+  padding-left: 8px;
 }
 
 .flujoProd {
@@ -214,7 +215,6 @@ border-radius: 5px;
 
 .contenedorSelector {
   width: 40%;
-  margin: auto;
 }
 
 .contenedorBtnHistorial {
@@ -255,4 +255,65 @@ letter-spacing: 0.025em;
 
 .table-dark tbody+tbody, .table-dark td, .table-dark th, .table-dark thead th {
   border-color: white;
+}
+
+.selectorSemana {
+  width: 305px;
+  margin: 20px 0;
+}
+
+.mesColor{
+  background-color: #003459;
+  color: white;
+  //font-family: Sintony;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+display: flex;
+align-items: center;
+letter-spacing: 0.025em;
+}
+
+.custom-select {
+  background-color: #E8E8E8;
+  //font-family: Sintony;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+display: flex;
+align-items: center;
+letter-spacing: 0.025em;
+outline: none;
+
+/* Primary Text */
+
+color: #3F3838;
+}
+
+.plusIcon{
+  margin-right: 4px;
+}
+
+.handIcon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.contenedorAlertProducto {
+  display: flex;
+  width: 80vw;
+  margin: 30px 0 40px 0;
+}
+
+.contenedorSelector2{
+  width: 600px;
+  height: 48px;
+  background: #f4f5f7;
+  /* Background Dark */
+
+  border: 1.5px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 5px;
 }

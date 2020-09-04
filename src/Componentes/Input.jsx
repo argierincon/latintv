@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
-const Input = ({ onChange, name }) => {
+const Input = ({ onChange, name, placeholder }) => {
   return (
     <div className="contenedorSelector">
       <input
@@ -9,6 +9,7 @@ const Input = ({ onChange, name }) => {
         onChange={onChange}
         type="text"
         name={name}
+        placeholder={placeholder}
       />
     </div>
   );

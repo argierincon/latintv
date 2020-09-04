@@ -10,6 +10,9 @@ import { FlujoProceso } from '../componentes/FlujoProceso';
 import { Boton } from '../componentes/Boton';
 import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
 const FlujoProducto = (props) => {
@@ -59,16 +62,22 @@ const FlujoProducto = (props) => {
         <div>
           <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
           <p className="subtitulo2 marginText">Elige tu producto</p>
-          <SelectSingleExample name="marcaProducto" onChange={handleSelect} />
+          <div className='contenedorSelector2'>
+            <SelectSingleExample name="marcaProducto" onChange={handleSelect} />
+          </div>
           <p className="subtitulo2 marginText">Elige el tipo de publicidad</p>
           <TipoPublicidad onChange={handleRadio} />
           <p className="subtitulo2 marginText">
             Pega la url de tu spot publicitario.
           </p>
-          <Input name="linkPublicidad" onChange={handleChange} />
+          <Input name="linkPublicidad" onChange={handleChange} placeholder='Ejemplo: https://' />
+          <div className='contenedorAlertProducto'>
+            <FontAwesomeIcon className='handIcon' icon={faHandPointRight} />
+            <p><strong>Ten en cuenta:</strong> El archivo que subas debes estar en la base de datos de tu empresa y debe cumplir con los Lineamientos Editoriales del canal.</p>
+          </div>
         </div>
         <div className="contenedorBotones">
-          <Boton namebutton="Atrás" estilo="back" link="/" />
+          <Boton namebutton="Atrás" estilo="back" link="/programacionsemanal" />
           <Boton
             namebutton="Continuar"
             estilo="next"
