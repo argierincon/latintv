@@ -5,11 +5,7 @@ import { Boton } from '../componentes/Boton';
 const PaginaNoEncontrada = () => {
   return (
     <div id="root">
-      <Astro
-        titulo="Página no encontrada."
-        msg="La página solicitada no existe, haz click en el siguiente boton para ir a la página de inicio."
-      />
-      <Boton estilo="next" />
+      <Astro titulo="404 Página no encontrada." />
     </div>
   );
 };
