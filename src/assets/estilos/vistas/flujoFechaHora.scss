@@ -40,9 +40,9 @@ h3 {
   align-items: center;
   letter-spacing: 0.025em;
 
-/* Primary Text */
+  /* Primary Text */
 
-  color: #3F3838;
+  color: #3f3838;
 }
 
 .body1 {
@@ -63,6 +63,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin: 30px 40px 60px;
+  width: 65%;
 }
 
 .btn {
@@ -82,12 +83,13 @@ h3 {
 .contenedorSelector > input {
   width: 600px;
   height: 48px;
-  background: #FAFAFA;
+  background: #f4f5f7;
   /* Background Dark */
 
-  border: 1.5px solid #E8E8E8;
+  border: 1.5px solid #e8e8e8;
   box-sizing: border-box;
   border-radius: 5px;
+  padding-left: 8px;
 }
 
 .flujoProd {
@@ -95,7 +97,7 @@ h3 {
 }
 
 .marginText {
-  margin: 25px 0;
+  margin: 15px 0;
 }
 
 .marginTitulo {
@@ -109,18 +111,18 @@ h3 {
 .headline {
   /* <1440 Desktop/32 - Headline Small ST */
 
-font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 32px;
-line-height: 40px;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.025em;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.025em;
 
   /* Primary Text */
-  color: #3A3A3A;
+  color: #3a3a3a;
 
   margin: 10px 0;
 }
@@ -128,23 +130,23 @@ letter-spacing: 0.025em;
 .bodyST {
   /* <1440 Desktop/16 - Body ST */
 
-font-family: Sintony;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 21px;
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.025em;
+  font-family: Sintony;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.025em;
 
   /* Primary Text */
-  color: #3A3A3A;
+  color: #3a3a3a;
 
   margin: 25px 0;
 }
 
-.contenedorReservado{
+.contenedorReservado {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,40 +158,40 @@ letter-spacing: 0.025em;
 .estiloLinkHistorial {
   /* <1440 Desktop/16 - Button AC */
 
-//font-family: Sintony;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 21px;
-/* identical to box height */
+  //font-family: Sintony;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
 
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
 
-/* Secondary Brand 2 */
+  /* Secondary Brand 2 */
 
-color: #00A6D6;
+  color: #00a6d6;
 }
 
 .btnCompra {
   /* Auto Layout */
 
-display: flex;
-flex-direction: row;
-padding: 13.5px 16px;
+  display: flex;
+  flex-direction: row;
+  padding: 13.5px 16px;
 
-position: absolute;
-width: 242px;
-height: 48px;
-left: 774px;
-top: 684px;
+  position: absolute;
+  width: 242px;
+  height: 48px;
+  left: 774px;
+  top: 684px;
 
-/* Secondary Brand Color */
+  /* Secondary Brand Color */
 
-background: #33A9CA;
-border-radius: 5px;
+  background: #33a9ca;
+  border-radius: 5px;
 }
 
 .contenedorGralHistorial {
@@ -200,7 +202,7 @@ border-radius: 5px;
   height: 100vh;
 }
 
-.contenedorHeadHistorial{
+.contenedorHeadHistorial {
   display: flex;
   flex-direction: row;
   width: 80vw;
@@ -214,13 +216,12 @@ border-radius: 5px;
 
 .contenedorSelector {
   width: 40%;
-  margin: auto;
 }
 
 .contenedorBtnHistorial {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;;
+  justify-content: space-between;
   width: 80vw;
   margin: 20px 0;
 }
@@ -230,21 +231,21 @@ border-radius: 5px;
 }
 
 .page-link {
-  color: #3F3838;
+  color: #3f3838;
   font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 21px;
-/* identical to box height */
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
 
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: 0.025em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.025em;
 }
 
 .bkcolor {
-  background: #33A9CA;
+  background: #33a9ca;
   color: white;
 }
 
@@ -253,6 +254,127 @@ letter-spacing: 0.025em;
   border-radius: 5px;
 }
 
-.table-dark tbody+tbody, .table-dark td, .table-dark th, .table-dark thead th {
+.table-dark tbody + tbody,
+.table-dark td,
+.table-dark th,
+.table-dark thead th {
   border-color: white;
+}
+
+.selectorSemana {
+  width: 305px;
+  margin: 20px 0;
+}
+
+.mesColor {
+  background-color: #003459;
+  color: white;
+  //font-family: Sintony;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.025em;
+}
+
+.custom-select {
+  background-color: #e8e8e8;
+  //font-family: Sintony;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.025em;
+  outline: none;
+  height: 39px;
+  margin-top: 1px;
+
+  /* Primary Text */
+
+  color: #3f3838;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.custom-select:hover {
+  cursor: pointer;
+}
+.plusIcon {
+  margin-right: 4px;
+}
+
+.handIcon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.contenedorAlertProducto {
+  display: flex;
+  width: 80vw;
+  margin: 30px 0 40px 0;
+}
+
+.contenedorAlertProducto > p {
+  width: 40%;
+}
+
+.contenedorSelector2 {
+  width: 600px;
+  height: 48px;
+  background: #f4f5f7;
+  /* Background Dark */
+
+  border: 1.5px solid #e8e8e8;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.contenedorFlujoDetalleReserva {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+
+}
+
+.tablaDetalleReserva {
+  width: 300px;
+  vertical-align: middle;
+}
+
+.tablaDetalleReserva tr {
+  text-align: left;
+  width:150px ;
+  padding: 5px 0;
+}
+
+.tablaDetalleReserva th {
+  text-align: left;
+  width:100px ;
+  padding: 0;
+}
+
+.listEstilos {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.tablaDetalleReserva td {
+  text-align: left;
+  padding: 0;
+}
+.mano {
+  width: 30px;
+  height: 30px;
+  margin-right: 1%;
 }

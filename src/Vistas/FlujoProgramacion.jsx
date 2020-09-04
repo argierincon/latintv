@@ -101,7 +101,7 @@ const FlujoProgramacion = (props) => {
           </p>
         </div>
 
-        <Categorias categorias="Noticias y deportes">
+        <Categorias>
           {/*<img style={{width: '58vw', paddingRight:35}}  src={NoticiasImagen} />     */}
 
           <Acordion title="Noticias y deportes" img={NoticiasImagen}>
@@ -118,7 +118,7 @@ const FlujoProgramacion = (props) => {
             ))}
           </Acordion>
         </Categorias>
-        <Categorias categorias="Entretenimiento">
+        <Categorias>
           {/*<img style={{width: '58vw', paddingRight:35}}  src={Entretenimiento} /> */}
 
           <Acordion title="Entretenimiento" img={Entretenimiento}>
@@ -137,7 +137,7 @@ const FlujoProgramacion = (props) => {
           </Acordion>
         </Categorias>
 
-        <Categorias categorias="Novelas y series">
+        <Categorias>
           {/*<img style={{width: '58vw', paddingRight:35}}  src={Novelas} />*/}
           <Acordion title="Novelas y series" img={Novelas}>
             {novelas.map((ele) => (
