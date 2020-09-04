@@ -6,9 +6,18 @@
   bottom: 0;
   width: 100%;
   float: right;
+  text-align: -webkit-center;  
+}
 
+.td1{
+  width: 20%;
+  text-align: left;
 }
 
 .footer-font{
   color: white;
+  font-size: small;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: -webkit-center;
+  height: 260px;  
 }

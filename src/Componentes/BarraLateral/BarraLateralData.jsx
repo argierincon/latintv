@@ -29,5 +29,11 @@ export const BarraLateralData = [
         icono: <IoIcons.IoMdPeople />,
         clase: 'nav-text'
     }
-    
+    ,
+    {
+        titulo: 'Cerrar sesión',
+        ruta: '/cerrarsesion',
+        icono: <IoIcons.IoMdPeople />,
+        clase: 'nav-text'
+    }
 ];

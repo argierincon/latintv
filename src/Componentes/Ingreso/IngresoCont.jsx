@@ -16,6 +16,7 @@ const IngresoCont = ({ submitForm }) => {
         <h1>
         ¡Bienvenido!
         </h1>       
+        <br></br>
         <div className='form-inputs'>
           <label className='form-label'>Correo</label>
           <input
@@ -41,16 +42,17 @@ const IngresoCont = ({ submitForm }) => {
           />
           {errors.contrasena && <p>{errors.contrasena}</p>}
         </div>
-
+        <br></br>
         <button className='form-input-btn' type='submit' onClick = {IngresarConCuenta} > 
           Ingresar
         </button>
-       {/* <button className='form-input-btn' type='submit' onClick={IngresarConGoogle}> 
+         {/* <button className='form-input-btn' type='submit' onClick={IngresarConGoogle}> 
           Sign in with Google+
-  </button>*/}
-       <img style={{width: '60px', height:'60px'}} type='submit' onClick={IngresarConGoogle}  src={Google} />
+         </button>*/}
+        <br></br>
+        <img style={{width: '56px', height:'53px'}} type='submit' onClick={IngresarConGoogle}  src={Google} />
 
-        <span className='form-input-login'>
+         <span className='form-input-login'>
           ¿Olvidaste tu cuenta? Login <a href='#'>here</a>
         </span>
       </form>

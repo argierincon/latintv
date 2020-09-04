@@ -19,6 +19,7 @@ import ConfirmacionReserva from '../vistas/ConfirmacionReserva';
 import HistorialReservas from '../vistas/HistorialReservas';
 
 
+
 const App = () => (
   <BrowserRouter>
     <Switch>
@@ -35,6 +36,7 @@ const App = () => (
       <Route exact path="/prueba" component={PruebaSelector} />{' '}
       <Route exact path="/confirmacion" component={ConfirmacionReserva} />{' '}
       <Route exact path="/historial" component={HistorialReservas} />{' '}
+      <Route exact path="/cerrarsesion" component={Inicio} />{' '}
     </Switch>
     {/*<Footer/>*/}
   </BrowserRouter>
