@@ -14,7 +14,7 @@ import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 import NoticiasImagen from '../assets/statics/noticias.png';
 import Entretenimiento from '../assets/statics/entretenimiento.png';
 import Novelas from '../assets/statics/novelas.png';
-import Acordion from '../Componentes/Acordion/Acordion';
+// import Accordion from 'react-hooks-accordion';
 
 
 const FlujoProgramacion = (props) => {
@@ -22,7 +22,6 @@ const FlujoProgramacion = (props) => {
     programa: null,
     costoPrograma: null,
     recargoHorario: null,
-    tipoPrograma: null,
   });
 
   const handleChange = (e) => {
@@ -30,7 +29,6 @@ const FlujoProgramacion = (props) => {
       programa: e.target.value,
       costoPrograma: e.target.dataset.costo,
       recargoHorario: e.target.dataset.recargo,
-      tipoPrograma: e.target.dataset.tipo,
     });
     console.log(datosFormulario);
   };
@@ -91,48 +89,35 @@ const FlujoProgramacion = (props) => {
 
   return (
     <>
-      <BarraLateral/>
+      <BarraLateral></BarraLateral>
       <ContenedorFormulario>
         <FlujoProceso producto="check" programa="check" />
-        <div className="contenedorTexto">
-          <h3 className="marginTitulo">Elige un programa</h3>
-          <p className="body1">
-            Selecciona un programa en el que deseas la transmisión de tu espacio
-            publicitario.
-          </p>
-        </div>
+        <InfoHead
+          titulo={'Elige un programa'}
+          info={
+            'Selecciona un programa en el que deseas la transmisión de tu espacio publicitario.'
+          }
+        />
 
         <Categorias categorias="Noticias y deportes">
 
-        {/*<img style={{width: '58vw', paddingRight:35}}  src={NoticiasImagen} />     */}
+          <img style={{width: '58vw', paddingRight:35}}  src={NoticiasImagen} />     
         
-        <Acordion
-          title="Noticias y deportes"
-          img = {NoticiasImagen}
-        >
-            {noticias.map((ele) => (
-              <Programa
-                onChange={handleChange}
-                nombrePrograma={ele.nombre}
-                name="programa"
-                id={ele.nombre}
-                key={ele.nombre}
-                costo={ele.costo}
-                recargo={ele.recargo}
-              />
-            ))}
-        </Acordion>
-        
-
+          {noticias.map((ele) => (
+            <Programa
+              onChange={handleChange}
+              nombrePrograma={ele.nombre}
+              name="programa"
+              id={ele.nombre}
+              key={ele.nombre}
+              costo={ele.costo}
+              recargo={ele.recargo}
+            />
+          ))}
         </Categorias>
         <Categorias categorias="Entretenimiento">
 
-        {/*<img style={{width: '58vw', paddingRight:35}}  src={Entretenimiento} /> */}
-
-        <Acordion
-          title="Entretenimiento"
-          img = {Entretenimiento}
-        >
+        <img style={{width: '58vw', paddingRight:35}}  src={Entretenimiento} />
           {entretenimiento.map((ele) => (
             <Programa
               onChange={handleChange}
@@ -142,35 +127,25 @@ const FlujoProgramacion = (props) => {
               key={ele.nombre}
               costo={ele.costo}
               recargo={ele.recargo}
-              tipo={ele.tipo}
             />
           ))}
-        </Acordion>
-        
-
         </Categorias>
         
 
         <Categorias categorias="Novelas y series">
-
-        {/*<img style={{width: '58vw', paddingRight:35}}  src={Novelas} />*/}
-        <Acordion
-          title="Novelas y series"
-          img = {Novelas}
-        >
+        <img style={{width: '58vw', paddingRight:35}}  src={Novelas} />
+        
           {novelas.map((ele) => (
             <Programa
-              onChange={7}
+              onChange={handleChange}
               nombrePrograma={ele.nombre}
               name="programa"
               id={ele.nombre}
               key={ele.nombre}
               costo={ele.costo}
               recargo={ele.recargo}
-              tipo={ele.tipo}
             />
           ))}
-        </Acordion>
         </Categorias>
         <div className="contenedorBotones">
           <Boton namebutton="Atrás" estilo="back" link="/reservaproducto" />
