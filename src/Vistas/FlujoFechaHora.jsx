@@ -12,6 +12,7 @@ import { SeleccionHora } from '../componentes/SeleccionHora';
 import { Boton } from '../componentes/Boton';
 import { SeleccionarSemana } from '../Componentes/SeleccionarSemana.jsx';
 import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
+import { SeleccionarSemana } from '../componentes/SeleccionarSemana';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -78,9 +79,12 @@ const FlujoFechaHora = (props) => {
           <SeleccionarSemana />
           <h3 className="marginTitulo">Elige fecha y hora</h3>
           <p className="subtitulo2 marginText"> Fecha </p>
+          <div className='selectorSemana'>
+            <SeleccionarSemana />
+          </div>
           <p className="body1">
-            Del lunes 17 al domingo 23 puedes seleccionar una o más opciones
-            para la transmición de tu publicidad.{' '}
+            Puedes seleccionar una o más opciones para la transmisión de tu
+            publicidad.{' '}
           </p>
           {programacion.length > 0 &&
             programacion.map((ele) => (
@@ -91,7 +95,7 @@ const FlujoFechaHora = (props) => {
               />
             ))}
           <div className="contenedorSubInfo">
-            <p className="subtitulo2"> Hora </p>
+            <p className="subtitulo2 marginText"> Hora </p>
             <p className="body1">
               {' '}
               Selecciona una opción para la transmición de tu publicidad.{' '}
