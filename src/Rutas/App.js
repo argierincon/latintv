@@ -15,6 +15,7 @@ import CorreoEnviado from '../Componentes/Registro/CorreoEnviado';
 
 import TipoPrograma from '../vistas/TipoPrograma';
 import PruebaSelector from '../vistas/PruebaSelector';
+import ConfirmacionReserva from '../vistas/ConfirmacionReserva';
 
 const App = () => (
   <BrowserRouter>
@@ -28,8 +29,9 @@ const App = () => (
       <Route exact path="/reservafechahora" component={FlujoFechaHora} />{' '}
       <Route exact path="/reservadetalle" component={FlujoDetalleReserva} />{' '}
       <Route exact path="/CorreoEnviado" component={CorreoEnviado} />{' '}
-      <Route exact path="/reservaproducto" component={TipoPrograma} />{' '}
+      <Route exact path="/tipoprogramas" component={TipoPrograma} />{' '}
       <Route exact path="/prueba" component={PruebaSelector} />{' '}
+      <Route exact path="/confirmacion" component={ConfirmacionReserva} />{' '}
     </Switch>
     {/*<Footer/>*/}
   </BrowserRouter>

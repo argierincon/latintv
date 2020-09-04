@@ -5,7 +5,7 @@ import '../assets/estilos/componentes/imgPrograma.scss';
 const ImgPrograma = ({ img }) => {
   return (
     <>
-      <img src={img} alt={img} />
+      <img className='programas' src={img} alt={img} />
     </>
   );
 };
