@@ -1,5 +1,7 @@
 import React from 'react';
 
+console.log();
+
 export const Paginacion = () => {
   return (
     <nav aria-label="Page navigation example">
