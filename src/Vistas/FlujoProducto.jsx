@@ -10,8 +10,8 @@ import { FlujoProceso } from '../componentes/FlujoProceso';
 import { Boton } from '../componentes/Boton';
 import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+import mano from '../assets/statics/Vector.png';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -62,7 +62,7 @@ const FlujoProducto = (props) => {
         <div>
           <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
           <p className="subtitulo2 marginText">Elige tu producto</p>
-          <div className='contenedorSelector2'>
+          <div className="contenedorSelector2">
             <SelectSingleExample name="marcaProducto" onChange={handleSelect} />
           </div>
           <p className="subtitulo2 marginText">Elige el tipo de publicidad</p>
@@ -70,10 +70,18 @@ const FlujoProducto = (props) => {
           <p className="subtitulo2 marginText">
             Pega la url de tu spot publicitario.
           </p>
-          <Input name="linkPublicidad" onChange={handleChange} placeholder='Ejemplo: https://' />
-          <div className='contenedorAlertProducto'>
-            <FontAwesomeIcon className='handIcon' icon={faHandPointRight} />
-            <p><strong>Ten en cuenta:</strong> El archivo que subas debes estar en la base de datos de tu empresa y debe cumplir con los Lineamientos Editoriales del canal.</p>
+          <Input
+            name="linkPublicidad"
+            onChange={handleChange}
+            placeholder="Ejemplo: https://"
+          />
+          <div className="contenedorAlertProducto">
+            <img className="mano" src={mano} alt="" />
+            <p>
+              <strong>Ten en cuenta:</strong> El archivo que subas debes estar
+              en la base de datos de tu empresa y debe cumplir con los
+              Lineamientos Editoriales del canal.
+            </p>
           </div>
         </div>
         <div className="contenedorBotones">
