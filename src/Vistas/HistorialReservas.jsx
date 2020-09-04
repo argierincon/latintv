@@ -40,7 +40,7 @@ const HistorialReservas = () => {
 
   return (
     <>
-    <BarraLateral></BarraLateral>
+      <BarraLateral></BarraLateral>
       <ContenedorFormulario>
         <div className="contenedorGralHistorial">
           <div className="contenedorHeadHistorial">

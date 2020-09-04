@@ -59,7 +59,7 @@ const FlujoProducto = (props) => {
       <BarraLateral />
       <ContenedorFormulario>
         <FlujoProceso producto="check" />
-        <div>
+        <div className="width50">
           <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
           <p className="subtitulo2 marginText">Elige tu producto</p>
           <div className="contenedorSelector2">

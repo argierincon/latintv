@@ -12,7 +12,6 @@ import { SeleccionHora } from '../componentes/SeleccionHora';
 import { Boton } from '../componentes/Boton';
 import { SeleccionarSemana } from '../Componentes/SeleccionarSemana.jsx';
 import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
-import { SeleccionarSemana } from '../componentes/SeleccionarSemana';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
@@ -76,10 +75,9 @@ const FlujoFechaHora = (props) => {
       <ContenedorFormulario>
         <FlujoProceso producto="check" programa="check" fecha="check" />
         <div>
-          <SeleccionarSemana />
           <h3 className="marginTitulo">Elige fecha y hora</h3>
           <p className="subtitulo2 marginText"> Fecha </p>
-          <div className='selectorSemana'>
+          <div className="selectorSemana">
             <SeleccionarSemana />
           </div>
           <p className="body1">

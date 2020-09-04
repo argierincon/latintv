@@ -20,7 +20,7 @@ export const TablaHistorial = ({ producto, total }) => {
             <td>Aceptado</td>
             <td>{ele.dia}</td>
             <td>1</td>
-            <td>${ele.costoTotal}</td>
+            <td>$ {ele.costoTotal}</td>
           </tr>
         ))}
         <tr>

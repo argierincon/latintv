@@ -11,6 +11,7 @@ import FlujoDetalleReserva from '../vistas/FlujoDetalleReserva';
 import IngresoForm from '../Componentes/Ingreso/IngresoForm';
 import RegistroForm from '../Componentes/Registro/RegistroForm';
 import CorreoEnviado from '../Componentes/Registro/CorreoEnviado';
+import PaginaNoEncontrada from '../Vistas/PaginaNoEncontrada.jsx';
 //import Footer from '../Componentes/PiePagina/Footer';
 
 import TipoPrograma from '../vistas/TipoPrograma';
@@ -34,6 +35,7 @@ const App = () => (
       <Route exact path="/prueba" component={PruebaSelector} />{' '}
       <Route exact path="/confirmacion" component={ConfirmacionReserva} />{' '}
       <Route exact path="/historial" component={HistorialReservas} />{' '}
+      {/* <Route component={PaginaNoEncontrada} /> */}
     </Switch>
     {/*<Footer/>*/}
   </BrowserRouter>
