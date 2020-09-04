@@ -22,6 +22,7 @@ const FlujoProgramacion = (props) => {
     programa: null,
     costoPrograma: null,
     recargoHorario: null,
+    tipoPrograma: null,
   });
 
   const handleChange = (e) => {
@@ -29,6 +30,7 @@ const FlujoProgramacion = (props) => {
       programa: e.target.value,
       costoPrograma: e.target.dataset.costo,
       recargoHorario: e.target.dataset.recargo,
+      tipoPrograma: e.target.dataset.tipo,
     });
     console.log(datosFormulario);
   };
@@ -92,12 +94,13 @@ const FlujoProgramacion = (props) => {
       <BarraLateral/>
       <ContenedorFormulario>
         <FlujoProceso producto="check" programa="check" />
-        <InfoHead
-          titulo={'Elige un programa'}
-          info={
-            'Selecciona un programa en el que deseas la transmisión de tu espacio publicitario.'
-          }
-        />
+        <div className="contenedorTexto">
+          <h3 className="marginTitulo">Elige un programa</h3>
+          <p className="body1">
+            Selecciona un programa en el que deseas la transmisión de tu espacio
+            publicitario.
+          </p>
+        </div>
 
         <Categorias categorias="Noticias y deportes">
 
@@ -139,6 +142,7 @@ const FlujoProgramacion = (props) => {
               key={ele.nombre}
               costo={ele.costo}
               recargo={ele.recargo}
+              tipo={ele.tipo}
             />
           ))}
         </Acordion>
@@ -163,6 +167,7 @@ const FlujoProgramacion = (props) => {
               key={ele.nombre}
               costo={ele.costo}
               recargo={ele.recargo}
+              tipo={ele.tipo}
             />
           ))}
         </Acordion>

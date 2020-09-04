@@ -10,13 +10,12 @@ import { InfoHead } from '../componentes/InfoHead';
 import { SeleccionFecha } from '../componentes/SeleccionFecha';
 import { SeleccionHora } from '../componentes/SeleccionHora';
 import { Boton } from '../componentes/Boton';
-import BarraLateral from '../Componentes/BarraLateral/BarraLateral'
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
 
 const FlujoFechaHora = (props) => {
   const { programa } = props;
-  console.log('------ pto programa', programa);
 
   const [datosFormulario, setDatosFormulario] = useState({
     fecha: {
@@ -71,42 +70,40 @@ const FlujoFechaHora = (props) => {
 
   return (
     <>
-    <BarraLateral/>
-    <ContenedorFormulario>
-      <div className="contenedorFlujoFH">
+      <BarraLateral />
+      <ContenedorFormulario>
         <FlujoProceso producto="check" programa="check" fecha="check" />
-        <InfoHead titulo="Elige fecha y hora" />
-        <div className="contenedorSubInfo">
-          <p className="subtitulo2"> Fecha </p>
+        <div>
+          <h3 className="marginTitulo">Elige fecha y hora</h3>
+          <p className="subtitulo2 marginText"> Fecha </p>
           <p className="body1">
-            {' '}
             Del lunes 17 al domingo 23 puedes seleccionar una o más opciones
             para la transmición de tu publicidad.{' '}
           </p>
+          {programacion.length > 0 &&
+            programacion.map((ele) => (
+              <SeleccionFecha
+                dias={ele.dia}
+                onChange={handleCheckbox}
+                key={`dias${ele.nombre}`}
+              />
+            ))}
+          <div className="contenedorSubInfo">
+            <p className="subtitulo2"> Hora </p>
+            <p className="body1">
+              {' '}
+              Selecciona una opción para la transmición de tu publicidad.{' '}
+            </p>
+          </div>
+          {programacion.length > 0 &&
+            programacion.map((ele) => (
+              <SeleccionHora
+                horas={ele.hora}
+                key={`horas${ele.nombre}`}
+                onChange={handleRadio}
+              />
+            ))}
         </div>
-        {programacion.length > 0 &&
-          programacion.map((ele) => (
-            <SeleccionFecha
-              dias={ele.dia}
-              onChange={handleCheckbox}
-              key={`dias${ele.nombre}`}
-            />
-          ))}
-        <div className="contenedorSubInfo">
-          <p className="subtitulo2"> Hora </p>
-          <p className="body1">
-            {' '}
-            Selecciona una opción para la transmición de tu publicidad.{' '}
-          </p>
-        </div>
-        {programacion.length > 0 &&
-          programacion.map((ele) => (
-            <SeleccionHora
-              horas={ele.hora}
-              key={`horas${ele.nombre}`}
-              onChange={handleRadio}
-            />
-          ))}
         <div className="contenedorBotones">
           <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
           <Boton
@@ -116,8 +113,7 @@ const FlujoFechaHora = (props) => {
             link="/reservadetalle"
           />
         </div>
-      </div>
-    </ContenedorFormulario>
+      </ContenedorFormulario>
     </>
   );
 };

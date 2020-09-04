@@ -20,6 +20,9 @@ const FlujoDetalleReserva = (props) => {
     hora,
     costoPrograma,
     recargoHorario,
+    costoPublicidad,
+    recargoEmpresa,
+    tipoPrograma,
   } = props;
 
   const db = firebase.firestore();
@@ -34,70 +37,95 @@ const FlujoDetalleReserva = (props) => {
         hora,
         costoPrograma,
         recargoHorario,
+        costoPublicidad,
+        recargoEmpresa,
+        tipoPrograma,
       })
       .then(() => console.log('listo'));
   };
 
-  const costoTipoPrograma = {
-    'A+': 5000,
-    B: 3000,
+  const fechaTransformada = Object.entries(fecha).filter((ele) => ele[1]);
+
+  const dias = fechaTransformada.length;
+
+  const calculoCostoUnitReserva = (
+    recargoEmpresa,
+    costoPublicidad,
+    costoPrograma,
+    cantDias
+  ) => {
+    const costoUnitario =
+      recargoEmpresa + costoPublicidad + costoPrograma * cantDias;
+    return costoUnitario;
   };
 
-  const calculoReserva = (
-    recargoEmpresa,
-    tipoPublicidad,
-    costoPrograma,
-    recargoHora
-  ) => {};
+  const calculoCostoTotalReserva = (costoUnit, recargoPorHora) => {
+    const recargoPercent = (costoUnit * recargoPorHora) / 100;
+    const costoTotal = recargoPercent + costoUnit;
 
-  const fechaTransformada = Object.entries(fecha).filter((ele) => ele[1]);
+    return costoTotal;
+  };
+
+  const unit = calculoCostoUnitReserva(
+    recargoEmpresa,
+    costoPublicidad,
+    costoPrograma,
+    dias,
+    recargoHorario
+  );
+
+  const costoTotal = calculoCostoTotalReserva(unit, recargoHorario);
 
   return (
     <>
-    <BarraLateral></BarraLateral>
+      <BarraLateral></BarraLateral>
       <div className="contenedorFlujoFH">
-      <FlujoProceso
-        producto="check"
-        programa="check"
-        fecha="check"
-        reserva="check"
-      />
-      <InfoHead
-        titulo="Detalles de reserva"
-        info="Verifica los detalles de reserva de tu espacio publicitario."
-      />
-      <ul>
-        <li>marca: {marcaProducto}</li>
-        <li>tipo: {tipoDePublicidad}</li>
-        <li>link: {linkPublicidad}</li>
-        <li>Programa: {programa}</li>
-        <li>
-          Día:{' '}
-          <ul>
-            {fechaTransformada.map((ele) => (
-              <li>{ele[0]}</li>
-            ))}
-          </ul>
-        </li>
-        <li>Hora: {hora}</li>
-        <li>Costo Programa: {costoPrograma}</li>
-        <li>Recargo Hora: {recargoHorario}</li>
-        <li>Recargo Empresa:</li>
-        <li>Costo Publicidad</li>
-      </ul>
-
-      <div className="contenedorBotones">
-        <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
-        <Boton
-          onClick={handleClick}
-          namebutton="Confirmar"
-          estilo="next"
-          link="/reservadetalle"
+        <FlujoProceso
+          producto="check"
+          programa="check"
+          fecha="check"
+          reserva="check"
         />
+        <InfoHead
+          titulo="Detalles de reserva"
+          info="Verifica los detalles de reserva de tu espacio publicitario."
+        />
+        <ul>
+          <li>Producto {marcaProducto}</li>
+          <li>Programa {programa}</li>
+          <li>
+            Día{' '}
+            <ul>
+              {fechaTransformada.map((ele) => (
+                <li key={ele[0]}>{ele[0]}</li>
+              ))}
+            </ul>
+          </li>
+          <li>Hora {hora}</li>
+          <li>N° de pautas</li>
+          <p>1 aviso de 30 segundos por fecha</p>
+          <li>Recargo Horario {recargoHorario}%</li>
+          <li>Precio unitario {unit}$</li>
+          <li>MONTO TOTAL {costoTotal}$</li>
+          {/*<li>tipo: {tipoDePublicidad}</li>
+          <li>link: {linkPublicidad}</li>
+          <li>Costo Programa: {costoPrograma}</li>
+          <li>Recargo Empresa: {recargoEmpresa}</li>
+          <li>Costo Publicidad: {costoPublicidad}</li>
+          <li>Tipo Programa: {tipoPrograma}</li> */}
+        </ul>
+
+        <div className="contenedorBotones">
+          <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
+          <Boton
+            onClick={handleClick}
+            namebutton="Confirmar"
+            estilo="next"
+            link="/confirmacion"
+          />
+        </div>
       </div>
-    </div>
- </>
-    
+    </>
   );
 };
 
@@ -109,8 +137,11 @@ const mapStateToProps = (state) => {
     programa: state.programa,
     fecha: state.fecha,
     hora: state.hora,
-    costoPrograma: state.costoPrograma,
-    recargoHorario: state.recargoHorario,
+    costoPrograma: parseInt(state.costoPrograma),
+    recargoHorario: parseInt(state.recargoHorario),
+    recargoEmpresa: parseInt(state.recargoEmpresa),
+    costoPublicidad: parseInt(state.costoPublicidad),
+    tipoPrograma: state.tipoPrograma,
   };
 };
 
