@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TablaHistorial = ({ producto, totalPorDia, total }) => {
+export const TablaHistorial = ({ producto, total }) => {
   console.log(producto);
   return (
     <table className="table table-bordered table-dark bkTablaHistorial">
