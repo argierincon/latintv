@@ -40,6 +40,8 @@ const FlujoDetalleReserva = (props) => {
         costoPublicidad,
         recargoEmpresa,
         tipoPrograma,
+        unit,
+        costoTotal,
       })
       .then(() => console.log('listo'));
   };
