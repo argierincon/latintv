@@ -3,19 +3,19 @@ import React from 'react';
 export const Paginacion = () => {
   return (
     <nav aria-label="Page navigation example">
-      <ul className="pagination">
-        <li className="page-item ">
-          <a className="page-link" href="#">
-            Previous
+      <ul class="pagination">
+        <li class="page-item ">
+          <a class="page-link" href="#">
+            Anterior
           </a>
         </li>
-        <li className="page-item ">
-          <a className="page-link bkcolor" href="#">
+        <li class="page-item ">
+          <a class="page-link bkcolor" href="#">
             1
           </a>
         </li>
-        <li className="page-item">
-          <a className="page-link" href="#">
+        <li class="page-item">
+          <a class="page-link" href="#">
             Siguiente
           </a>
         </li>

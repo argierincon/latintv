@@ -5,6 +5,7 @@ import ContenedorFormulario from '../Componentes/ContenedorFormulario/Contenedor
 import SelectSingleExample from '../componentes/SelectSingleExample';
 import { TablaHistorial } from '../componentes/TablaHistorial';
 import { Paginacion } from '../componentes/Paginacion';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 const HistorialReservas = () => {
   const db = firebase.firestore();
@@ -39,6 +40,7 @@ const HistorialReservas = () => {
 
   return (
     <>
+    <BarraLateral></BarraLateral>
       <ContenedorFormulario>
         <div className="contenedorGralHistorial">
           <div className="contenedorHeadHistorial">
