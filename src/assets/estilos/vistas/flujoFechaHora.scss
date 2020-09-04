@@ -96,7 +96,7 @@ h3 {
 }
 
 .marginText {
-  margin: 25px 0;
+  margin: 15px 0;
 }
 
 .marginTitulo {
@@ -316,4 +316,43 @@ color: #3F3838;
   border: 1.5px solid #E8E8E8;
   box-sizing: border-box;
   border-radius: 5px;
+}
+
+.contenedorFlujoDetalleReserva {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+
+}
+
+.tablaDetalleReserva {
+  width: 300px;
+  vertical-align: middle;
+}
+
+.tablaDetalleReserva tr {
+  text-align: left;
+  width:150px ;
+  padding: 5px 0;
+}
+
+.tablaDetalleReserva th {
+  text-align: left;
+  width:100px ;
+  padding: 0;
+}
+
+.listEstilos {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.tablaDetalleReserva td {
+  text-align: left;
+  padding: 0;
 }

@@ -81,41 +81,73 @@ const FlujoDetalleReserva = (props) => {
   return (
     <>
       <BarraLateral></BarraLateral>
-      <div className="contenedorFlujoFH">
+      <div className="contenedorFlujoDetalleReserva">
         <FlujoProceso
           producto="check"
           programa="check"
           fecha="check"
           reserva="check"
         />
-        <InfoHead
-          titulo="Detalles de reserva"
-          info="Verifica los detalles de reserva de tu espacio publicitario."
-        />
-        <ul>
-          <li>Producto {marcaProducto}</li>
-          <li>Programa {programa}</li>
-          <li>
-            Día{' '}
-            <ul>
-              {fechaTransformada.map((ele) => (
-                <li key={ele[0]}>{ele[0]}</li>
-              ))}
-            </ul>
-          </li>
-          <li>Hora {hora}</li>
-          <li>N° de pautas</li>
-          <p>1 aviso de 30 segundos por fecha</p>
-          <li>Recargo Horario {recargoHorario}%</li>
-          <li>Precio unitario {unit}$</li>
-          <li>MONTO TOTAL {costoTotal}$</li>
-          {/*<li>tipo: {tipoDePublicidad}</li>
+        <div>
+          <h3>Detalles de reserva</h3>
+          <p className="body1 marginText">
+            Verifica los detalles de reserva de tu espacio publicitario.
+          </p>
+
+          <table class="table tablaDetalleReserva">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">{marcaProducto}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Programa</th>
+                <td>{programa}</td>
+              </tr>
+              <tr>
+                <th scope="row">Fechas</th>
+                <td>
+                  <ul className="listEstilos">
+                    {fechaTransformada.map((ele) => (
+                      <li className="listEstilos" key={ele[0]}>
+                        {ele[0]}
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Hora</th>
+                <td>{hora}</td>
+              </tr>
+              <tr>
+                <th scope="row">N° de pautas</th>
+                <td>1 aviso de 30 segundos por fecha</td>
+              </tr>
+              <tr>
+                <th scope="row">Recargo de horario</th>
+                <td>{recargoHorario}%</td>
+              </tr>
+              <tr>
+                <th scope="row">Precio unitario</th>
+                <td>${unit}</td>
+              </tr>
+              <tr>
+                <th scope="row">MONTO TOTAL</th>
+                <th>${costoTotal}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/*<li>tipo: {tipoDePublicidad}</li>
           <li>link: {linkPublicidad}</li>
           <li>Costo Programa: {costoPrograma}</li>
           <li>Recargo Empresa: {recargoEmpresa}</li>
           <li>Costo Publicidad: {costoPublicidad}</li>
           <li>Tipo Programa: {tipoPrograma}</li> */}
-        </ul>
 
         <div className="contenedorBotones">
           <Boton namebutton="Atrás" estilo="back" link="/reservaprograma" />
