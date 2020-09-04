@@ -16,6 +16,8 @@ import CorreoEnviado from '../Componentes/Registro/CorreoEnviado';
 import TipoPrograma from '../vistas/TipoPrograma';
 import PruebaSelector from '../vistas/PruebaSelector';
 import ConfirmacionReserva from '../vistas/ConfirmacionReserva';
+import HistorialReservas from '../vistas/HistorialReservas';
+
 
 const App = () => (
   <BrowserRouter>
@@ -32,6 +34,7 @@ const App = () => (
       <Route exact path="/tipoprogramas" component={TipoPrograma} />{' '}
       <Route exact path="/prueba" component={PruebaSelector} />{' '}
       <Route exact path="/confirmacion" component={ConfirmacionReserva} />{' '}
+      <Route exact path="/historial" component={HistorialReservas} />{' '}
     </Switch>
     {/*<Footer/>*/}
   </BrowserRouter>

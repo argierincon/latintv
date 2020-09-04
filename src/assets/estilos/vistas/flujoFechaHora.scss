@@ -1,3 +1,7 @@
+.paginacion {
+  color: #838383;
+}
+
 .contenedorFlujoFH {
   display: flex;
   flex-direction: column;
@@ -186,4 +190,69 @@ top: 684px;
 
 background: #33A9CA;
 border-radius: 5px;
+}
+
+.contenedorGralHistorial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedorHeadHistorial{
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  margin: 50px 0;
+}
+
+.contenedorTitle {
+  width: 60%;
+  margin: auto;
+}
+
+.contenedorSelector {
+  width: 40%;
+  margin: auto;
+}
+
+.contenedorBtnHistorial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;;
+  width: 80vw;
+  margin: 20px 0;
+}
+
+.paginacion {
+  color: #838383;
+}
+
+.page-link {
+  color: #3F3838;
+  font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.025em;
+}
+
+.bkcolor {
+  background: #33A9CA;
+  color: white;
+}
+
+.bkTablaHistorial {
+  background: #003459;
+  border-radius: 5px;
+}
+
+.table-dark tbody+tbody, .table-dark td, .table-dark th, .table-dark thead th {
+  border-color: white;
 }
