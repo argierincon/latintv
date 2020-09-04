@@ -40,6 +40,8 @@ const FlujoDetalleReserva = (props) => {
         costoPublicidad,
         recargoEmpresa,
         tipoPrograma,
+        unit,
+        costoTotal,
       })
       .then(() => console.log('listo'));
   };
@@ -121,7 +123,7 @@ const FlujoDetalleReserva = (props) => {
             onClick={handleClick}
             namebutton="Confirmar"
             estilo="next"
-            link="/reservadetalle"
+            link="/confirmacion"
           />
         </div>
       </div>

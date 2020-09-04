@@ -2,6 +2,7 @@ import React from 'react';
 import Validacion from './Validacion';
 import EstadoForm from './MetodosForm';
 import './IngresoForm.scss';
+import Google from '../../assets/statics/google.png';
 
 const IngresoCont = ({ submitForm }) => {
   const { handleChange, values, errors, IngresarConCuenta, IngresarConGoogle } = EstadoForm(
@@ -44,9 +45,10 @@ const IngresoCont = ({ submitForm }) => {
         <button className='form-input-btn' type='submit' onClick = {IngresarConCuenta} > 
           Ingresar
         </button>
-        <button className='form-input-btn' type='submit' onClick={IngresarConGoogle}> 
+       {/* <button className='form-input-btn' type='submit' onClick={IngresarConGoogle}> 
           Sign in with Google+
-        </button>
+  </button>*/}
+       <img style={{width: '60px', height:'60px'}} type='submit' onClick={IngresarConGoogle}  src={Google} />
 
         <span className='form-input-login'>
           ¿Olvidaste tu cuenta? Login <a href='#'>here</a>
