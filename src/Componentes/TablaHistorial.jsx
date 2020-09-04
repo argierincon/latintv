@@ -18,7 +18,7 @@ export const TablaHistorial = ({ producto, total }) => {
           <tr key={ele.marcaProducto + idx}>
             <th scope="row">{ele.marcaProducto}</th>
             <td>Aceptado</td>
-            <td>17/08/2020</td>
+            <td>{ele.dia}</td>
             <td>1</td>
             <td>{ele.costoTotal}$</td>
           </tr>
