@@ -121,7 +121,7 @@ const FlujoDetalleReserva = (props) => {
             onClick={handleClick}
             namebutton="Confirmar"
             estilo="next"
-            link="/reservadetalle"
+            link="/confirmacion"
           />
         </div>
       </div>
