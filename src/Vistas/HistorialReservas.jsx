@@ -4,12 +4,11 @@ import SelectSingleExample from '../componentes/SelectSingleExample';
 import { TablaHistorial } from '../componentes/TablaHistorial';
 import { Paginacion } from '../componentes/Paginacion';
 
-
 const HistorialReservas = () => {
   return (
     <>
       <ContenedorFormulario>
-        <div className='contenedorGralHistorial'>
+        <div className="contenedorGralHistorial">
           <div className="contenedorHeadHistorial">
             <div className="contenedorTitle">
               <h3>Historial de reservas</h3>
