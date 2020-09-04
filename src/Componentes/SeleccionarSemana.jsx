@@ -2,14 +2,14 @@ import React from 'react';
 
 export const SeleccionarSemana = () => {
   return (
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary mesColor" type="button">
+    <div className="input-group mb-3">
+      <div className="input-group-prepend">
+        <button className="btn btn-outline-secondary mesColor" type="button">
           Agosto
         </button>
       </div>
       <select
-        class="custom-select"
+        className="custom-select"
         id="inputGroupSelect03"
         aria-label="Example select with button addon"
       >

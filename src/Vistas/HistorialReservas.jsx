@@ -10,31 +10,24 @@ import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 const HistorialReservas = () => {
   const db = firebase.firestore();
   const [producto, setProducto] = useState([]);
-  const [total, setTotal] = useState([]);
+  const [total, setTotal] = useState('');
 
   useEffect(() => {
     db.collection('reservas')
       .get()
       .then((querySnapShot) => {
+        const temp = [];
         querySnapShot.forEach((doc) => {
           const programas = doc.data();
-          producto.push(programas);
+          temp.push(programas);
         });
-        setProducto([...producto]);
-        console.log(producto);
-      });
-  }, []);
-
-  useEffect(() => {
-    db.collection('reservas')
-      .get()
-      .then((querySnapShot) => {
-        querySnapShot.forEach((doc) => {
-          const programas = doc.data();
-          total.push(programas);
-        });
-        setTotal([...total]);
-        console.log(total);
+        setProducto(temp);
+        setTotal(
+          temp
+            .map((e) => e.costoTotal)
+            .filter((e) => !isNaN(e))
+            .reduce((p, c) => p + c, 0)
+        );
       });
   }, []);
 
@@ -52,7 +45,7 @@ const HistorialReservas = () => {
               <SelectSingleExample />
             </div>
           </div>
-          <TablaHistorial producto={producto} />
+          <TablaHistorial producto={producto} total={total} />
           <div className="contenedorBtnHistorial">
             <p className="body1 paginacion">Mostrando página 1 de 1 </p>
             <Paginacion></Paginacion>

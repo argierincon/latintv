@@ -35,7 +35,7 @@ const App = () => (
       <Route exact path="/prueba" component={PruebaSelector} />{' '}
       <Route exact path="/confirmacion" component={ConfirmacionReserva} />{' '}
       <Route exact path="/historial" component={HistorialReservas} />{' '}
-      {/* <Route component={PaginaNoEncontrada} /> */}
+      <Route component={PaginaNoEncontrada} />
     </Switch>
     {/*<Footer/>*/}
   </BrowserRouter>
