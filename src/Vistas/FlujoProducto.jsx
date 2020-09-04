@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { setProducto } from '../actions';
+import SelectSingleExample from '../componentes/SelectSingleExample';
 import Input from '../Componentes/Input';
 import TipoPublicidad from './TipoPublicidad';
 import ContenedorFormulario from '../Componentes/ContenedorFormulario/ContenedorFormulario';
 import { FlujoProceso } from '../componentes/FlujoProceso';
 import { Boton } from '../componentes/Boton';
-
-import SelectSingleExample from '../componentes/SelectSingleExample';
+import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 import '../assets/estilos/vistas/flujoFechaHora.scss';
-import BarraLateral from '../Componentes/BarraLateral/BarraLateral';
 
 const FlujoProducto = (props) => {
   const [datosFormulario, setDatosFormulario] = useState({
@@ -20,16 +19,22 @@ const FlujoProducto = (props) => {
     linkPublicidad: null,
     recargoEmpresa: null,
     costoPublicidad: null,
-    selector: null,
   });
 
   const handleChange = (e) => {
-    console.log(e);
     setDatosFormulario({
       ...datosFormulario,
       [e.target.name]: e.target.value,
     });
     console.log(datosFormulario);
+  };
+
+  const handleSelect = (e) => {
+    setDatosFormulario({
+      ...datosFormulario,
+      marcaProducto: e.value,
+    });
+    console.log(e, 'holaaaaaaa');
   };
 
   const handleRadio = (e) => {
@@ -52,7 +57,7 @@ const FlujoProducto = (props) => {
         <div>
           <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
           <p className="subtitulo2 marginText">Elige tu producto</p>
-          <SelectSingleExample name="selector" onChange={handleChange} />
+          <SelectSingleExample name="marcaProducto" onChange={handleSelect} />
           <p className="subtitulo2 marginText">Elige el tipo de publicidad</p>
           <TipoPublicidad onChange={handleRadio} />
           <p className="subtitulo2 marginText">

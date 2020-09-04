@@ -16,7 +16,6 @@ import '../assets/estilos/vistas/flujoFechaHora.scss';
 
 const FlujoFechaHora = (props) => {
   const { programa } = props;
-  console.log('------ pto programa', programa);
 
   const [datosFormulario, setDatosFormulario] = useState({
     fecha: {
@@ -89,11 +88,13 @@ const FlujoFechaHora = (props) => {
                 key={`dias${ele.nombre}`}
               />
             ))}
-          <p className="subtitulo2 marginText"> Hora </p>
-          <p className="body1">
-            {' '}
-            Selecciona una opción para la transmición de tu publicidad.{' '}
-          </p>
+          <div className="contenedorSubInfo">
+            <p className="subtitulo2"> Hora </p>
+            <p className="body1">
+              {' '}
+              Selecciona una opción para la transmición de tu publicidad.{' '}
+            </p>
+          </div>
           {programacion.length > 0 &&
             programacion.map((ele) => (
               <SeleccionHora
