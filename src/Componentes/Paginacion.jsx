@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Paginacion = () => {
+export const  = () => {
     return (
     <nav aria-label="Page navigation example">
         <ul class="pagination">
