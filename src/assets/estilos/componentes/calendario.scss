@@ -1,0 +1,51 @@
+.table {
+    padding: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.025em
+}
+.table thead th {
+    vertical-align: middle;
+}
+.table td {
+    vertical-align: middle;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+}
+
+.table th {
+    vertical-align: middle;
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+}
+
+.cabeceraTabla {
+    background-color: #0090F7;;
+    color: white;
+    text-align: center;
+}
+
+.horaTabla {
+    background-color: #EEECF1;
+    text-align: center;
+}
+
+.reservado {
+    background-color: #DADADA;
+    
+}
+
+.sinRecargo {
+    background-color: #37B47E;
+}
+
+.cincoRecargo {
+    background-color: #FFB8B8;
+}
+
+.quinceRecargo {
+    background-color: #AFDEEB;
+}

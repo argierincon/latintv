@@ -1,0 +1,69 @@
+@import './estilosCompartidos';
+
+
+
+.btnHeader{
+  @include definirTamaños(33%, 88%);
+  // @include definirColores(#F0B02F, #1C1712);
+  // border: {
+  //     style: solid;
+  //     color: #FFFFFF;
+  //     width: 5px 5px 5px 0px;/* top, right, bottom and left */
+  // };
+  @include tamanoLetra(21px);
+  @include definirFlex(flex, center, center);
+  color: white;
+}
+
+.contenedorBtn{
+  @include definirTamaños(70%, 100%);
+  @include flexDirection;
+  text-align: right;
+}
+
+.contenedorLogo{
+  width: 30%;
+  @include definirFlex(flex, center, center);
+  flex-direction: row;
+  text-align: left;
+  padding: 39px;
+  justify-content: end;
+
+  // z-index: 9999;
+}
+.logo{
+  @include definirTamaños(17%, 12%);
+}
+
+header{
+  @include definirTamaños(100%, 78px);
+  @include flexDirection;
+  // @include definirColores(#412A21, #FFFFFF);
+  background-color: #003459;
+  margin: 0; 
+}
+
+@media screen and (min-width:650px) {
+  header{
+    display: block;
+    @include definirTamaños(100%, 78px);
+    @include flexDirection;
+  }
+  .btnHeader{
+      border-width: 3px 3px 4px 0px; /* top, right, bottom and left */
+      @include tamanoLetra(20px);
+  }
+}
+
+@media screen and (max-width:742px) {
+  header{
+      display: none;
+  }
+  .btnHeader{
+      border-width: 3px 3px 4px 0px; /* top, right, bottom and left */
+      @include tamanoLetra(20px);
+  }
+}
+
+
+
