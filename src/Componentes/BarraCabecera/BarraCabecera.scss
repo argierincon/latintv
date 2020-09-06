@@ -26,10 +26,13 @@
   @include definirFlex(flex, center, center);
   flex-direction: row;
   text-align: left;
+  padding: 39px;
+  justify-content: end;
+
   // z-index: 9999;
 }
 .logo{
-  @include definirTamaños(16%, 10%);
+  @include definirTamaños(17%, 12%);
 }
 
 header{

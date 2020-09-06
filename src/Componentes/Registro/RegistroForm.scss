@@ -58,7 +58,7 @@
   background-size: auto;
   min-height: 100vh;
   background-size:cover;
-  max-height: 800px;
+  max-height: 900px;
 
 }
 
@@ -81,17 +81,22 @@
   width: 80%;
   margin-bottom: 1rem;
   color: #fff;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .form-inputs {
   margin-bottom: 0.5rem;
   width: 80%;
+  font-size: small;
 }
 
 .form-inputs p {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   color: #f00e0e;
+  font-size: small;
+
 }
 
 .form-label {
@@ -99,6 +104,7 @@
   font-size: 0.8rem;
   margin-bottom: 6px;
   color: #fff;
+  font-size: large;
 }
 
 .form-input {
@@ -109,6 +115,8 @@
   height: 40px;
   width: 100%;
   border: none;
+  font-size: small;
+
 }
 
 .form-input::placeholder {
@@ -131,6 +139,8 @@
   border: none;
   color: #fff;
   font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
 }
 
 .form-input-btn:hover {

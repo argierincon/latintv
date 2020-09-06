@@ -94,7 +94,7 @@ const FlujoDetalleReserva = (props) => {
             Verifica los detalles de reserva de tu espacio publicitario.
           </p>
 
-          <table class="table tablaDetalleReserva">
+          <table className="table tablaDetalleReserva">
             <thead>
               <tr>
                 <th scope="col">Producto</th>

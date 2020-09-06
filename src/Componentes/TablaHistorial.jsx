@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const TablaHistorial = ({ producto, total }) => {
-  console.log(producto);
   return (
     <table className="table table-bordered table-dark bkTablaHistorial">
       <thead>
@@ -18,14 +17,22 @@ export const TablaHistorial = ({ producto, total }) => {
           <tr key={ele.marcaProducto + idx}>
             <th scope="row">{ele.marcaProducto}</th>
             <td>Aceptado</td>
-            <td>17/08/2020</td>
+            <td>
+              {ele.fecha['Lunes 17/08/2020'] && <span>17/08/2020</span>}
+              {ele.fecha['Martes 18/08/2020'] && <span>18/08/2020</span>}
+              {ele.fecha['Miércoles 19/08/2020'] && <span>19/08/2020</span>}
+              {ele.fecha['Jueves 20/08/2020'] && <span>20/08/2020</span>}
+              {ele.fecha['Viernes 21/08/2020'] && <span>21/08/2020</span>}
+              {ele.fecha['Sábado 22/08/2020'] && <span>22/08/2020</span>}
+              {ele.fecha['Domingo 23/08/2020'] && <span>23/08/2020</span>}
+            </td>
             <td>1</td>
-            <td>${ele.costoTotal}</td>
+            <td>$ {ele.costoTotal}</td>
           </tr>
         ))}
         <tr>
           <td colSpan="4">TOTAL</td>
-          <td>{total}</td>
+          <td>$ {total}</td>
         </tr>
       </tbody>
     </table>

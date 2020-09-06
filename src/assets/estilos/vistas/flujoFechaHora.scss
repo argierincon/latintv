@@ -290,12 +290,21 @@ h3 {
   align-items: center;
   letter-spacing: 0.025em;
   outline: none;
+  height: 39px;
+  margin-top: 1px;
 
   /* Primary Text */
 
   color: #3f3838;
 }
 
+.width50 {
+  width: 50%;
+}
+
+.custom-select:hover {
+  cursor: pointer;
+}
 .plusIcon {
   margin-right: 4px;
 }
@@ -365,6 +374,7 @@ h3 {
   padding: 0;
 }
 .mano {
-  width: 4%;
+  width: 30px;
+  height: 30px;
   margin-right: 1%;
 }

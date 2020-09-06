@@ -15,6 +15,7 @@ const RegistroCont = ({ submitForm }) => {
         <h1>
          ¡Regístrate gratis!
         </h1>
+        <br></br>
         <div className='form-inputs'>
           <label className='form-label'>Nombre</label>
           <input

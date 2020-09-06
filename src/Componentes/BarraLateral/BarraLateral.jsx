@@ -29,8 +29,8 @@ function BarraLateral() {
                             <Link to="/Ingreso" className='btnHeader'><span>Deportes</span></Link>
                             <Link to="/Ingreso" className='btnHeader'><span>Novelas</span></Link>
                             <Link to="/Ingreso" className='btnHeader'><span>Publicidad</span></Link>
-                            <Link to="/" className='btnHeader'><span>REGISTRATE</span></Link>
-                            <Link to="/Ingreso" className='btnHeader'><span>INGRESAR</span></Link>
+                            <Link to="/" className='btnHeader'><span>Regístrate</span></Link>
+                            <Link to="/Ingreso" className='btnHeader'><span>Ingresar</span></Link>
                         </div>
                     </div>
                   

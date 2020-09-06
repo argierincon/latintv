@@ -79,6 +79,8 @@
   width: 80%;
   margin-bottom: 1rem;
   color: #fff;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .form-inputs {
@@ -97,6 +99,8 @@
   font-size: 0.8rem;
   margin-bottom: 6px;
   color: #fff;
+  font-size: large;
+
 }
 
 .form-input {
@@ -107,6 +111,7 @@
   height: 40px;
   width: 100%;
   border: none;
+  font-size: small;
 }
 
 .form-input::placeholder {
@@ -129,6 +134,8 @@
   border: none;
   color: #fff;
   font-size: 1rem;
+  font-size: large;
+
 }
 
 .form-input-btn:hover {

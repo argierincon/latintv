@@ -21,7 +21,7 @@ const TipoPublicidad = ({ onChange }) => {
             <hr />
             <p className="datosPublicidad">
               {' '}
-              <strong>S/ 690.00</strong> soles por fecha{' '}
+              <strong>$ 690.00</strong> soles por fecha{' '}
             </p>
             <p className="datosPublicidad">
               {' '}
@@ -45,7 +45,7 @@ const TipoPublicidad = ({ onChange }) => {
             <hr />
             <p className="datosPublicidad">
               {' '}
-              <strong>S/ 690.00</strong> soles por fecha{' '}
+              <strong>$ 690.00</strong> soles por fecha{' '}
             </p>
             <p className="datosPublicidad"> *Product Placement + Mención </p>
           </div>

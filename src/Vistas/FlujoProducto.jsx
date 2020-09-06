@@ -59,9 +59,9 @@ const FlujoProducto = (props) => {
       <BarraLateral />
       <ContenedorFormulario>
         <FlujoProceso producto="check" />
-        <div>
+        <div className="width50">
           <h3 className="marginTitulo">¡Empieza con la reserva!</h3>
-          <p className="subtitulo2 marginText">Elige tu producto</p>
+          <p className="subtitulo2 marginText">Elige tu producto o marca</p>
           <div className="contenedorSelector2">
             <SelectSingleExample name="marcaProducto" onChange={handleSelect} />
           </div>
