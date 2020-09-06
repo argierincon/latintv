@@ -5,7 +5,7 @@ import Select from '@atlaskit/select';
 import firebase from 'firebase';
 import 'firebase/firestore';
 
-//intentado mostrar los nombres de programas de empresas para luego cambiar por las marcas
+//data correcta
 export const SelectSingleExample = ({ onChange }) => {
   const db = firebase.firestore();
   const [empresas, setEmpresas] = useState([]);
