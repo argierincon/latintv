@@ -59,6 +59,6 @@ Lo realizamos en desktop pues esta versión sería más accesible y espaciosa pa
 
 **Usuario de prueba:**
 agenciadigitalfantasia@gmail.com
-Contraseña:
+**Contraseña:**
 123456
 
