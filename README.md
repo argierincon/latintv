@@ -57,5 +57,8 @@ Lo realizamos en desktop pues esta versión sería más accesible y espaciosa pa
 - Figma
 - Miro 
 
-
+**Usuario de prueba:**
+agenciadigitalfantasia@gmail.com
+Contraseña:
+123456
 
